@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anvit Naik | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Portfolio of Anvit Naik, Computer Science & Engineering student and ACM Executive Committee Member specializing in full-stack development, Python, and GenAI."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+  <script>
+    // Immediately hide non-Willem content before page renders
+    document.documentElement.style.overflow = 'hidden';
+  </script>
+</head>
+
+
+<body>
+  <!-- Willem Loading Animation -->
+  <section class="willem-header is--loading is--hidden">
+    <div class="willem-loader">
+      <div class="willem__h1">
+        <div class="willem__h1-start" data-splitside="start">
+          <span class="willem__letter">E</span>
+          <span class="willem__letter">x</span>
+          <span class="willem__letter">p</span>
+        </div>
+        <div class="willem-loader__box">
+          <div class="willem-loader__box-inner">
+            <div class="willem__growing-image">
+              <div class="willem__growing-image-wrap">
+                <img class="willem__cover-image" src="assets/wavy bg.jpg" loading="lazy" alt="loading">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="willem__h1-end" data-splitside="end">
+          <span class="willem__letter">l</span>
+          <span class="willem__letter">o</span>
+          <span class="willem__letter">r</span>
+          <span class="willem__letter">e</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand">
+        <div class="nav-avatar">AN</div>
+        <div>
+
+          <div style="font-size: 0.7rem; color: var(--muted);">
+         Computer Science and Engineering | FullStack Developer |
+            <br>
+            AI Enthusiast
+          </div>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrapper">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-pill fade-in-down">
+            <span>Open For Internships </span>
+          </div> <br>
+
+          <h1 id="hero-heading" class="hero-title fade-in-up">
+             I'm <span>Anvit Naik</span>
+          </h1>
+          <p class="hero-subtitle fade-in-up">
+            A motivated Computer Science and Engineering student with a strong
+            foundation in full-stack development, Python, and modern AI tools.
+            I enjoy building practical solutions, collaborating with teams, and
+            continuously learning new technologies.
+          </p>
+
+          <div class="hero-tags fade-in-up">
+            <span class="tag">ACM Executive Committee Member</span>
+            <span class="tag tag--soft">B.E | B.Tech batch of 2023</span>
+            <span class="tag tag--soft">Bengaluru, Karnataka</span>
+          </div>
+
+          <div class="hero-actions fade-in-up">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+        </div>
+
+       <div class="hero-right slide-in-right">
+  <div class="hero-card" aria-label="Profile photo">
+    <div class="hero-profile">
+      <div class="hero-profile-ring">
+        <div class="hero-profile-img">
+          <img
+            src="./assets/hero-portrait.jpg"
+            alt="Anvit Naik"
+          />
+        </div>
+      </div>
+    
+    </div>
+
+    <div class="hero-orbit" aria-hidden="true"></div>
+  </div>
+</div>
+
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">
+          About
+          <span class="section-title-badge">Profile</span>
+        </h2>
+        <p class="section-subtitle">
+          A quick overview of who I am, what I’m studying, and what motivates
+          me as a developer and learner.
+        </p>
+      </div>
+
+      <article class="about fade-in-up">
+        <p>
+          I’m a Computer Science and Engineering student at Global Academy of
+          Technology, Bengaluru Class of 2023 , with a strong academic
+          record and a CGPA of 9. I enjoy building practical applications in
+          web development, Python, and AI, and I love turning ideas into
+          working prototypes.
+        </p>
+        <p>
+          Beyond academics, I actively participate in technical communities as
+          an ACM Executive Committee Member, collaborate on hackathons, and
+          volunteer at college events. I’m currently seeking internship
+          opportunities where I can contribute, learn from real-world projects,
+          and grow as a full-stack and AI-driven developer.
+        </p>
+      </article>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">
+          Skills
+          <span class="section-title-badge">Tech Stack</span>
+        </h2>
+        <p class="section-subtitle">
+          A snapshot of the languages, tools, and technologies I’ve used in
+          coursework, projects, and training.
+        </p>
+      </div>
+
+      <div class="skills-grid fade-in-up">
+        <div class="card fade-in-up">
+          <div class="card-title">Programming Languages</div>
+          <div class="skill-chip-row">
+            <span class="skill-chip">C</span>
+            <span class="skill-chip">Java</span>
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">SQL</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Web technologies</div>
+          <div class="skill-chip-row">
+            <span class="skill-chip">HTML</span>
+            <span class="skill-chip">CSS</span>
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">Responsive UI</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Back-End &amp; Databases</div>
+          <div class="skill-chip-row">
+            <span class="skill-chip">Node.js</span>
+            <span class="skill-chip">Socket.IO</span>
+            <span class="skill-chip">MySQL</span>
+            <span class="skill-chip">MongoDB • Atlas</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Tools &amp; Platforms</div>
+          <div class="skill-chip-row">
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">GitHub</span>
+            <span class="skill-chip">VS Code</span>
+            <span class="skill-chip">Eclipse</span>
+            <span class="skill-chip">Canva</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">AI &amp; Data</div>
+          <div class="skill-chip-row">
+            <span class="skill-chip">GenAI • LLMs</span>
+            <span class="skill-chip">Vertex AI</span>
+            <span class="skill-chip">RAG &amp; Multimodality</span>
+            <span class="skill-chip">Data Analytics</span>
+            <span class="skill-chip">Prompt Engineering</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Soft Skills</div>
+          <div class="skill-chip-row">
+            <span class="skill-chip">Leadership</span>
+            <span class="skill-chip">Teamwork</span>
+            <span class="skill-chip">Problem-Solving</span>
+            <span class="skill-chip">Communication</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">
+          Projects
+          <span class="section-title-badge">Selected Work</span>
+        </h2>
+        <p class="section-subtitle">
+          A few projects that reflect my interest in web development, Python
+          applications, real-time systems, and AI-powered interactions.
+        </p>
+      </div>
+
+      <div class="project-grid fade-in-up">
+        <article class="card project-card fade-in-up">
+          <img src="./assets/Travel.webp" alt="Travel Explorer" class="project-card__img">
+          <div class="project-card__content">
+            <div class="card-header">
+              <h3 class="card-title">Travel Explorer</h3>
+              <span class="chip">Front-End</span>
+            </div>
+            <div class="card-meta">HTML • CSS • JavaScript</div>
+            <div class="card-body">
+              <p>Interactive web app for exploring travel destinations with a responsive, engaging UI.</p>
+            </div>
+            <div class="project-card__footer">
+              <div class="card-tags">
+                <span class="card-tag">Responsive Design</span>
+                <span class="card-tag">UX</span>
+              </div>
+              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card fade-in-up">
+          <img src="assets/event.webp" alt="Event Scheduler" class="project-card__img">
+          <div class="project-card__content">
+            <div class="card-header">
+              <h3 class="card-title">Event Scheduler</h3>
+              <span class="chip">Python</span>
+            </div>
+            <div class="card-meta">Python</div>
+            <div class="card-body">
+              <p>Python app for managing events and schedules with streamlined admin workflows.</p>
+            </div>
+            <div class="project-card__footer">
+              <div class="card-tags">
+                <span class="card-tag">Python</span>
+                <span class="card-tag">CLI / GUI</span>
+              </div>
+              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card fade-in-up">
+          <img src="assets/AI cover.jpg" alt="Multimodal Chatbot" class="project-card__img">
+          <div class="project-card__content">
+            <div class="card-header">
+              <h3 class="card-title">Multimodal Chatbot</h3>
+              <span class="chip">AI • GenAI</span>
+            </div>
+            <div class="card-meta">Python • Streamlit • MongoDB Atlas</div>
+            <div class="card-body">
+              <p>AI chatbot processing text and visual inputs with LLMs, persistent storage, and Streamlit UI.</p>
+            </div>
+            <div class="project-card__footer">
+              <div class="card-tags">
+                <span class="card-tag">LLMs</span>
+                <span class="card-tag">RAG</span>
+                <span class="card-tag">Streamlit</span>
+              </div>
+              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card fade-in-up">
+          <img src="assets/Chat.jpg" alt="Realtime Chat Application" class="project-card__img">
+          <div class="project-card__content">
+            <div class="card-header">
+              <h3 class="card-title">Realtime Chat App</h3>
+              <span class="chip">Full-Stack</span>
+            </div>
+            <div class="card-meta">Node.js • Socket.IO</div>
+            <div class="card-body">
+              <p>Real-time chat with auth, private/group messaging, typing indicators, and delivery status.</p>
+            </div>
+            <div class="project-card__footer">
+              <div class="card-tags">
+                <span class="card-tag">Realtime</span>
+                <span class="card-tag">Socket.IO</span>
+                <span class="card-tag">Node.js</span>
+              </div>
+              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience & Activities -->
+    <section id="experience" aria-labelledby="experience-heading">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">
+          Experience
+          <span class="section-title-badge">Leadership &amp; Involvement</span>
+        </h2>
+        <p class="section-subtitle">
+          Roles, hackathons, and volunteering that have helped me grow beyond
+          the classroom.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">ACM Executive Committee Member</h3>
+              <span class="chip">ACM Student Chapter</span>
+            </div>
+            <div class="card-meta">
+              Association for Computing Machinery • Apr 2025 – Present •
+              Bengaluru, Karnataka
+            </div>
+            <div class="card-body">
+              <p>
+                Contributing to the ACM student chapter by helping organize
+                events, workshops, and technical sessions that engage and
+                support fellow students.
+              </p>
+              <p>
+                This role has strengthened my leadership, teamwork, and
+                communication skills while keeping me close to cutting-edge
+                computing topics.
+              </p>
+            </div>
+          </div>
+
+          <div style="height: 0.9rem;"></div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">SAP HackFest</h3>
+              <span class="chip">Hackathon</span>
+            </div>
+            <div class="card-meta">State Hub Round Qualifier</div>
+            <div class="card-body">
+              <p>
+                Participated in SAP HackFest on the theme of Sustainable
+                Business. Our team qualified for the State Hub Round, where we
+                ideated and prototyped impactful solutions around
+                sustainability.
+              </p>
+              <p>
+                The experience improved my rapid prototyping, collaboration,
+                and problem-solving under time constraints.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Volunteer &amp; Extra-Curricular</h3>
+            <span class="chip">Campus Activities</span>
+          </div>
+          <div class="card-body">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-title">
+                  25th Annual VTU Fest Volunteer
+                </div>
+                <div class="timeline-meta">
+                  Global Academy of Technology
+                </div>
+                <p>
+                  Assisted in organizing the 25th VTU fest, contributing to
+                  planning and execution of events. This strengthened my
+                  organizational, coordination, and team-oriented skills.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-title">Community &amp; Peer Learning</div>
+                <div class="timeline-meta">On-campus &amp; online</div>
+                <p>
+                  Participating in online courses, coding platforms, and peer
+                  discussions to continuously upgrade my skills and stay
+                  updated with new technologies.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" aria-labelledby="education-heading">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">
+          Education
+          <span class="section-title-badge">Academic Path</span>
+        </h2>
+        <p class="section-subtitle">
+          My academic journey so far, from school to undergraduate engineering.
+        </p>
+      </div>
+
+      <div class="grid-3 fade-in-up">
+        <article class="card fade-in-up">
+          <div class="card-title">B.E. / B.Tech in CSE</div>
+          <div class="card-meta">Global Academy of Technology</div>
+          <div class="card-body">
+            <p>2023 – 2027</p>
+            <p>CGPA: 9</p>
+            <p style="margin-top: 0.35rem; color: var(--muted);">
+              Core focus on computer science fundamentals, data structures,
+              algorithms, and software development.
+            </p>
+          </div>
+        </article>
+
+    
+
+        <article class="card">
+          <div class="card-title">10th Standard</div>
+          <div class="card-meta">Chandana High School</div>
+          <div class="card-body">
+            <p>Completed in 2021</p>
+            <p>Percentage: 92.36%</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Certifications & Training -->
+    <section id="certifications" aria-labelledby="certifications-heading">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">
+          Certifications
+          <span class="section-title-badge">Learning</span>
+        </h2>
+        <p class="section-subtitle">
+          Certifications and training programs that reflect my interest in
+          full-stack development, clean code, data analytics, and GenAI.
+        </p>
+      </div>
+
+      <div class="cert-grid fade-in-up">
+        <div class="cert-card fade-in-up">
+          <span class="cert-year">2024</span>
+          <h3 class="cert-name">Python Clean Code</h3>
+          <p class="cert-desc">Infosys Springboard</p>
+          <a href="file:///C:/Users/Anvit/Downloads/1-18d1e4c6-348c-4f5c-a19c-ea0876c38523%20(1).pdf" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+
+        <div class="cert-card fade-in-up">
+          <span class="cert-year">2024</span>
+          <h3 class="cert-name">Full Stack Development</h3>
+          <p class="cert-desc">Infosys Springboard</p>
+          <a href="https://infyspringboard.onwingspan.com/web/en/app/profile/competency/certificate" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+
+        <div class="cert-card fade-in-up">
+          <span class="cert-year">2025</span>
+          <h3 class="cert-name">Gen AI Exchange Program</h3>
+          <p class="cert-desc">Google Cloud</p>
+          <a href="https://www.linkedin.com/posts/anvitnaik_ai-machinelearning-careergrowth-share-7333459786677530625-k8JU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcyg1gBz0aeCD_5saayXQOR8WSALKcZyAM" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+
+        <div class="cert-card fade-in-up">
+          <span class="cert-year">2025</span>
+          <h3 class="cert-name">AI Foundations</h3>
+          <p class="cert-desc">Oracle University</p>
+          <a href="https://www.linkedin.com/posts/anvitnaik_oracle-cloud-infrastructure-2025-certified-share-7363613916330938368-kJx2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcyg1gBz0aeCD_5saayXQOR8WSALKcZyAM" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+
+        <div class="cert-card fade-in-up">
+          <span class="cert-year">2026</span>
+          <h3 class="cert-name">Google Cloud Engineer</h3>
+          <p class="cert-desc">Google Career Launchpad</p>
+          <a href="https://www.credly.com/badges/02e2b6a8-bf51-442d-a644-6aa9b8b7e399/public_url" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+
+        <div class="cert-card fade-in-up">
+          <span class="cert-year">2025</span>
+          <h3 class="cert-name">Data Analytics</h3>
+          <p class="cert-desc">Forage – Deloitte Australia</p>
+          <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_KhuvhkvrbLxhhDxxq_1750613462614_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Virtual Internship - Wide Card -->
+      <div class="cert-wide fade-in-up">
+        <div class="cert-wide-card">
+          <div class="cert-wide-left">
+            <span class="cert-year">2025</span>
+            <h3 class="cert-wide-title">Virtual Internship – Edunet (with Shell)</h3>
+          </div>
+          <p class="cert-wide-desc">Exposure to industry projects and workflows, bridging academic learning with real-world engineering practices.</p>
+          <img class="cert-logo cert-logo--wide" src="https://cdn.simpleicons.org/shell/FFD500" alt="Shell" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Links & Profiles -->
+    <section aria-labelledby="links-heading">
+      <div class="section-header">
+        <h2 class="section-title">
+          Links &amp; Profiles
+          <span class="section-title-badge">Online</span>
+        </h2>
+        <p class="section-subtitle">
+          Explore my profiles, live portfolio, and coding activity.
+        </p>
+      </div>
+
+      <div class="links-grid">
+        <a
+          class="link-card"
+          href="https://my-portfolio-red-phi-60.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div>
+            <span class="link-label">Live Portfolio</span>
+            <span class="link-sub">my-portfolio-red-phi-60.vercel.app</span>
+          </div>
+            <span class="link-icon" aria-hidden="true">
+              <svg class="link-triangle" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18" style="margin-left:6px; fill:#ffffff;"><polygon points="12,17 6,9 18,9"/></svg>
+            </span>
+        </a>
+
+        <a
+          class="link-card"
+          href="https://www.linkedin.com/in/anvitnaik"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div>
+            <span class="link-label">LinkedIn</span>
+            <span class="link-sub">/in/anvitnaik</span>
+          </div>
+          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+        </a>
+
+        <a
+          class="link-card"
+          href="https://github.com/Anvitnaik-cloud"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div>
+            <span class="link-label">GitHub</span>
+            <span class="link-sub">Anvitnaik-cloud</span>
+          </div>
+          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg></span>
+        </a>
+
+        <a
+          class="link-card"
+          href="https://www.hackerrank.com/profile/anvitnaik470"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div>
+            <span class="link-label">HackerRank</span>
+            <span class="link-sub">/profile/anvitnaik470</span>
+          </div>
+          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h10v2a5 5 0 01-5 5 5 5 0 01-5-5V3z"/><path d="M5 8v2a5 5 0 01-4 4v1h22v-1a5 5 0 01-4-4V8"/><path d="M9 21h6v-2H9z"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">
+          Contact
+          <span class="section-title-badge">Say Hello</span>
+        </h2>
+        <p class="section-subtitle">
+          Feel free to reach out for internships, collaborations, or tech-based
+          projects.
+        </p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="card">
+          <h1 style="font-size: 0.98rem; margin-bottom: 0.8rem;">
+            Contact Info
+          </h1>
+          <div class="contact-list">
+            <div class="contact-item">
+              <span>Email</span>
+              <strong><a href="mailto:anvitnaik470@gmail.com">anvitnaik470@gmail.com</a><a href="mailto:anvitnaik470@gmail.com" class="contact-verify" aria-label="Send email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></strong>
+            </div>
+            
+            <div class="contact-item">
+              <span>Location</span>
+              <strong>Bengaluru, Karnataka, India</strong>
+            </div>
+            <div class="contact-item">
+              <span>Languages</span>
+              <strong>English • Hindi • Kannada</strong>
+            </div>
+          </div>
+          <p class="contact-note">
+            I’m open for internships, project ideas and
+            community tech initiatives.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Let's build something together</h3>
+          <small>
+            Have a project in mind? I'd love to hear about it. Here's what I can help with:
+          </small>
+          <ul>
+            <li>
+              <strong>Web Development</strong> — responsive front-end interfaces and full-stack applications with Node.js &amp; databases.
+            </li>
+            <li>
+              <strong>Python &amp; Data</strong> — automation scripts, analytics dashboards, and event management tools.
+            </li>
+            <li>
+              <strong>AI &amp; GenAI</strong> — chatbots, multimodal assistants, and RAG-powered intelligent systems.
+            </li>
+          </ul>
+          <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted);">
+            Drop me an email or connect on LinkedIn.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner wrapper">
+      <div class="social-icons" role="navigation" aria-label="Social links">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/anvitnaik" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Anvit Naik">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.1c.65-1.2 2.25-2.5 4.63-2.5C22.5 7.7 24 10.3 24 14.2V24h-5v-8.1c0-1.9-.04-4.3-2.63-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-5V8z"/></svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Anvitnaik-cloud">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
+        </a>
+
+        <!-- Email (simple mail glyph) -->
+        <a href="mailto:anvitnaik470@gmail.com" aria-label="Email Anvit">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M1.5 4.5h21v15h-21v-15zm2 2v11h17v-11l-8.5 5.5L3.5 6.5z"/></svg>
+        </a>
+      </div>
+
+      <p>
+        © <span id="year"></span> Anvit Naik. Built with Passion and late Night Coffee for learning and to Kill
+        Boredom.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script>
+    // Dynamic year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Intersection Observer for scroll-triggered animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    const animatedElements = document.querySelectorAll(
+      '.fade-in-up, .fade-in-down, .fade-in, .slide-in-left, .slide-in-right'
+    );
+    animatedElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    // Back to Top button
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+  <!-- GSAP Library for Willem Loading Animation -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  
+  <script>
+    // Willem Loading Animation
+    function initWillemLoadingAnimation() {
+      const container = document.querySelector('.willem-header');
+      if (!container) return;
+
+      const loadingLetter = container.querySelectorAll('.willem__letter');
+      const startSide = container.querySelector('.willem__h1-start');
+      const endSide = container.querySelector('.willem__h1-end');
+      const box = container.querySelectorAll('.willem-loader__box');
+      const growingImage = container.querySelectorAll('.willem__growing-image');
+
+      const tl = gsap.timeline({
+        defaults: {
+          ease: 'power2.inOut'
+        },
+        onStart: () => {
+          container.classList.remove('is--hidden');
+          document.body.classList.add('loading-mode');
+        },
+        onComplete: () => {
+          // Show content after animation
+          document.body.classList.remove('loading-mode');
+          document.body.classList.add('loaded');
+          container.classList.add('is--hidden');
+          document.documentElement.style.overflow = 'auto';
+        }
+      });
+
+      // Initial delay (0.35s) - pure wait before anything starts
+      tl.to({}, {}, 0);
+
+      // Phase 1: Text appears (0.85s) - faster letter animation
+      if (loadingLetter.length) {
+        tl.from(loadingLetter, {
+          yPercent: 100,
+          opacity: 0,
+          stagger: 0.08,
+          duration: 1.00,
+          ease: 'cubic.out'
+        }, 0.35);
+      }
+
+      // Phase 2: Hold text (0.6s) - shorter settle time
+      tl.to({}, {}, '+=0.6');
+
+      // Phase 3: Split and expand (1s) - faster expansion
+      if (startSide) {
+        tl.to(startSide, { x: -60, duration: 1 }, '<');
+      }
+
+      if (endSide) {
+        tl.to(endSide, { x: 60, duration: 1 }, '<');
+      }
+
+      if (box.length) {
+        tl.to(box, { width: '1em', duration: 1 }, '<');
+      }
+
+      if (growingImage.length) {
+        tl.to(growingImage, { width: '100%', duration: 1 }, '<');
+      }
+
+      // Phase 4: Fullscreen expansion (1.2s) - faster fullscreen transition
+      if (growingImage.length) {
+        tl.to(
+          growingImage,
+          { width: '100vw', height: '100dvh', duration: 1.2 },
+          '<'
+        );
+      }
+
+      if (box.length) {
+        tl.to(
+          box,
+          { width: '110vw', duration: 1.2 },
+          '<'
+        );
+      }
+    }
+
+    // Immediately set loading state
+    document.body.classList.add('loading-mode');
+
+    // Initialize when DOM is ready - use RAF for optimization
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        requestAnimationFrame(() => initWillemLoadingAnimation());
+      });
+    } else {
+      requestAnimationFrame(() => initWillemLoadingAnimation());
+    }
+  </script>
+</body>
+</html>
+
+
