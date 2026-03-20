@@ -766,6 +766,14 @@ section {
   flex-shrink: 0;
 }
 
+.cert-wide-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
 .cert-wide-title {
   font-size: 1rem;
   font-weight: 600;
@@ -776,6 +784,9 @@ section {
   font-size: 0.85rem;
   color: #555;
   line-height: 1.4;
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 880px) {
@@ -786,6 +797,11 @@ section {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
+  }
+  .cert-wide-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
   #certifications {
     padding: 2rem 1.2rem;
