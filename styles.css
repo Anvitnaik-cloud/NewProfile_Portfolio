@@ -471,6 +471,10 @@ section {
   margin-bottom: 4rem;
 }
 
+#skills {
+  margin-bottom: 6rem;
+}
+
 .section-header {
   display: flex;
   align-items: baseline;
