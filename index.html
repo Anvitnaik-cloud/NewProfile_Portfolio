@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Anvit Naik | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Portfolio of Anvit Naik, Computer Science & Engineering student and ACM Executive Committee Member specializing in full-stack development, Python, and GenAI."
-  />
+  <meta name="description"
+    content="Portfolio of Anvit Naik, Computer Science & Engineering student and ACM Executive Committee Member specializing in full-stack development, Python, and GenAI." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
   <script>
     // Immediately hide non-Willem content before page renders
@@ -51,23 +48,47 @@
     </div>
   </section>
 
-  <!-- Navigation -->
-  <header class="nav">
-    <div class="nav-inner">
-      <a href="#top" class="nav-brand">
-        <span class="nav-logo">AN.</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <!-- AN. Logo (fixed top-left) -->
+  <a href="#top" class="nav-logo-fixed" id="nav-logo-fixed">
+    <span class="nav-logo">AN.</span>
+  </a>
+
+  <!-- Hamburger Menu Button (always visible, top-right fixed) -->
+  <div id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu" role="button" tabindex="0">
+    <span id="top-line" class="hamburger-menu__line"></span>
+    <span id="bottom-line" class="hamburger-menu__line"></span>
+  </div>
+
+  <!-- Fullscreen Navigation Overlay -->
+  <nav id="nav-overlay" class="nav-overlay" aria-hidden="true">
+    <div id="links-section" class="nav-overlay__links">
+      <a href="#about" class="nav-overlay__link" data-menu-link>About</a>
+      <a href="#skills" class="nav-overlay__link" data-menu-link>Skills</a>
+      <a href="#projects" class="nav-overlay__link" data-menu-link>Projects</a>
+      <a href="#experience" class="nav-overlay__link" data-menu-link>Experience</a>
+      <a href="#education" class="nav-overlay__link" data-menu-link>Education</a>
+      <a href="#certifications" class="nav-overlay__link" data-menu-link>Certifications</a>
+      <a href="#contact" class="nav-overlay__link" data-menu-link>Contact</a>
     </div>
-  </header>
+
+    <div id="contacts-section" class="nav-overlay__contacts">
+      <div class="nav-overlay__contact-block">
+        <p class="nav-overlay__contact-label">Email</p>
+        <a href="mailto:anvitnaik470@gmail.com" class="nav-overlay__contact-value">anvitnaik470@gmail.com</a>
+      </div>
+      <div class="nav-overlay__contact-block">
+        <p class="nav-overlay__contact-label">Socials</p>
+        <div class="nav-overlay__socials">
+          <a href="https://www.linkedin.com/in/anvitnaik" target="_blank" rel="noopener noreferrer"
+            class="nav-overlay__social-link nav-overlay__social-link--linkedin">LinkedIn</a>
+          <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+            class="nav-overlay__social-link nav-overlay__social-link--github">GitHub</a>
+          <a href="https://www.hackerrank.com/profile/anvitnaik470" target="_blank" rel="noopener noreferrer"
+            class="nav-overlay__social-link nav-overlay__social-link--hackerrank">HackerRank</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <main id="top" class="wrapper">
     <!-- Hero -->
@@ -78,9 +99,9 @@
             <span>Open For Internships </span>
           </div> <br>
 
-          <h1 id="hero-heading" class="hero-title fade-in-up">
-             I'm <span>Anvit Naik</span>
-          </h1>
+          <h3 id="hero-heading" class="hero-title fade-in-up">
+            I'm Anvit Naik
+          </h3>
           <p class="hero-subtitle fade-in-up">
             A motivated Computer Science and Engineering student with a strong
             foundation in full-stack development, Python, and modern AI tools.
@@ -104,23 +125,20 @@
           </div>
         </div>
 
-       <div class="hero-right slide-in-right">
-  <div class="hero-card" aria-label="Profile photo">
-    <div class="hero-profile">
-      <div class="hero-profile-ring">
-        <div class="hero-profile-img">
-          <img
-            src="./assets/hero-portrait.jpg"
-            alt="Anvit Naik"
-          />
-        </div>
-      </div>
-    
-    </div>
+        <div class="hero-right slide-in-right">
+          <div class="hero-card" aria-label="Profile photo">
+            <div class="hero-profile">
+              <div class="hero-profile-ring">
+                <div class="hero-profile-img">
+                  <img src="./assets/hero-portrait.jpg" alt="Anvit Naik" />
+                </div>
+              </div>
 
-    <div class="hero-orbit" aria-hidden="true"></div>
-  </div>
-</div>
+            </div>
+
+            <div class="hero-orbit" aria-hidden="true"></div>
+          </div>
+        </div>
 
     </section>
 
@@ -190,7 +208,7 @@
         </div>
 
         <div class="card">
-          <div class="card-title">Back-End &amp; Databases</div>
+          <div class="card-title">Back-End Databases</div>
           <div class="skill-chip-row">
             <span class="skill-chip">Node.js</span>
             <span class="skill-chip">Socket.IO</span>
@@ -208,7 +226,7 @@
             <span class="skill-chip">Eclipse</span>
             <span class="skill-chip">Canva</span>
             <span class="skill-chip">Ubuntu</span>
-            
+
           </div>
         </div>
 
@@ -219,7 +237,7 @@
             <span class="skill-chip">Vertex AI</span>
             <span class="skill-chip">RAG</span>
             <span class="skill-chip">Prompting </span>
-            <span class="skill-chip">Data Analytics</span> 
+            <span class="skill-chip">Data Analytics</span>
           </div>
         </div>
 
@@ -237,19 +255,22 @@
 
     <!-- Projects -->
     <section id="projects" aria-labelledby="projects-heading">
-      <div class="section-header fade-in-up">
-        <h2 class="section-title">
-          Projects
-          <span class="section-title-badge">Selected Work</span>
-        </h2>
-        <p class="section-subtitle">
-          A few projects that reflect my interest in web development, Python
-          applications, real-time systems, and AI-powered interactions.
-        </p>
-      </div>
+      <!-- Top row: Header left + Travel card right -->
+      <div class="project-top-row fade-in-up">
+        <div class="project-top-left">
+          <div class="section-header">
+            <h2 class="section-title">
+              Projects
+              <span class="section-title-badge">Selected Work</span>
+            </h2>
+            <p class="section-subtitle">
+              A few projects that reflect my interest in web development, Python
+              applications, real-time systems, and AI-powered interactions.
+            </p>
+          </div>
+        </div>
 
-      <div class="project-grid fade-in-up">
-        <article class="card project-card fade-in-up">
+        <article class="card project-card">
           <img src="./assets/Travel.webp" alt="Travel Explorer" class="project-card__img">
           <div class="project-card__content">
             <div class="card-header">
@@ -265,8 +286,43 @@
                 <span class="card-tag">Responsive Design</span>
                 <span class="card-tag">UX</span>
               </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
+              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                class="project-github-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Bottom row: 3 cards -->
+      <div class="project-bottom-row fade-in-up">
+        <article class="card project-card fade-in-up">
+          <img src="assets/Chat.jpg" alt="Realtime Chat Application" class="project-card__img">
+          <div class="project-card__content">
+            <div class="card-header">
+              <h3 class="card-title">Realtime Chat App</h3>
+              <span class="chip">Full-Stack</span>
+            </div>
+            <div class="card-meta">Node.js • Socket.IO</div>
+            <div class="card-body">
+              <p>Real-time chat with auth, private/group messaging, typing indicators, and delivery status.</p>
+            </div>
+            <div class="project-card__footer">
+              <div class="card-tags">
+                <span class="card-tag">Realtime</span>
+                <span class="card-tag">Socket.IO</span>
+                <span class="card-tag">Node.js</span>
+              </div>
+              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                class="project-github-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                </svg>
               </a>
             </div>
           </div>
@@ -288,8 +344,12 @@
                 <span class="card-tag">Python</span>
                 <span class="card-tag">CLI / GUI</span>
               </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
+              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                class="project-github-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                </svg>
               </a>
             </div>
           </div>
@@ -312,32 +372,12 @@
                 <span class="card-tag">RAG</span>
                 <span class="card-tag">Streamlit</span>
               </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card project-card fade-in-up">
-          <img src="assets/Chat.jpg" alt="Realtime Chat Application" class="project-card__img">
-          <div class="project-card__content">
-            <div class="card-header">
-              <h3 class="card-title">Realtime Chat App</h3>
-              <span class="chip">Full-Stack</span>
-            </div>
-            <div class="card-meta">Node.js • Socket.IO</div>
-            <div class="card-body">
-              <p>Real-time chat with auth, private/group messaging, typing indicators, and delivery status.</p>
-            </div>
-            <div class="project-card__footer">
-              <div class="card-tags">
-                <span class="card-tag">Realtime</span>
-                <span class="card-tag">Socket.IO</span>
-                <span class="card-tag">Node.js</span>
-              </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
+              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                class="project-github-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                </svg>
               </a>
             </div>
           </div>
@@ -467,7 +507,7 @@
           </div>
         </article>
 
-    
+
 
         <article class="card">
           <div class="card-title">10th Standard</div>
@@ -484,7 +524,7 @@
     <section id="certifications" aria-labelledby="certifications-heading">
       <div class="section-header fade-in-up">
         <h2 class="section-title">
-          Certifications
+          The Museum <br> of Certifications
           <span class="section-title-badge">Learning</span>
         </h2>
         <p class="section-subtitle">
@@ -498,8 +538,13 @@
           <span class="cert-year">2024</span>
           <h3 class="cert-name">Python Clean Code</h3>
           <p class="cert-desc">Infosys Springboard</p>
-          <a href="file:///C:/Users/Anvit/Downloads/1-18d1e4c6-348c-4f5c-a19c-ea0876c38523%20(1).pdf" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          <a href="file:///C:/Users/Anvit/Downloads/1-18d1e4c6-348c-4f5c-a19c-ea0876c38523%20(1).pdf" target="_blank"
+            rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
           </a>
         </div>
 
@@ -507,8 +552,13 @@
           <span class="cert-year">2024</span>
           <h3 class="cert-name">Full Stack Development</h3>
           <p class="cert-desc">Infosys Springboard</p>
-          <a href="https://infyspringboard.onwingspan.com/web/en/app/profile/competency/certificate" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          <a href="https://infyspringboard.onwingspan.com/web/en/app/profile/competency/certificate" target="_blank"
+            rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
           </a>
         </div>
 
@@ -516,8 +566,13 @@
           <span class="cert-year">2025</span>
           <h3 class="cert-name">Gen AI Exchange Program</h3>
           <p class="cert-desc">Google Cloud</p>
-          <a href="https://www.linkedin.com/posts/anvitnaik_ai-machinelearning-careergrowth-share-7333459786677530625-k8JU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcyg1gBz0aeCD_5saayXQOR8WSALKcZyAM" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          <a href="https://www.linkedin.com/posts/anvitnaik_ai-machinelearning-careergrowth-share-7333459786677530625-k8JU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcyg1gBz0aeCD_5saayXQOR8WSALKcZyAM"
+            target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
           </a>
         </div>
 
@@ -525,8 +580,13 @@
           <span class="cert-year">2025</span>
           <h3 class="cert-name">AI Foundations</h3>
           <p class="cert-desc">Oracle University</p>
-          <a href="https://www.linkedin.com/posts/anvitnaik_oracle-cloud-infrastructure-2025-certified-share-7363613916330938368-kJx2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcyg1gBz0aeCD_5saayXQOR8WSALKcZyAM" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          <a href="https://www.linkedin.com/posts/anvitnaik_oracle-cloud-infrastructure-2025-certified-share-7363613916330938368-kJx2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcyg1gBz0aeCD_5saayXQOR8WSALKcZyAM"
+            target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
           </a>
         </div>
 
@@ -534,8 +594,13 @@
           <span class="cert-year">2026</span>
           <h3 class="cert-name">Google Cloud Engineer</h3>
           <p class="cert-desc">Google Career Launchpad</p>
-          <a href="https://www.credly.com/badges/02e2b6a8-bf51-442d-a644-6aa9b8b7e399/public_url" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          <a href="https://www.credly.com/badges/02e2b6a8-bf51-442d-a644-6aa9b8b7e399/public_url" target="_blank"
+            rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
           </a>
         </div>
 
@@ -543,8 +608,13 @@
           <span class="cert-year">2025</span>
           <h3 class="cert-name">Data Analytics</h3>
           <p class="cert-desc">Forage – Deloitte Australia</p>
-          <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_KhuvhkvrbLxhhDxxq_1750613462614_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_KhuvhkvrbLxhhDxxq_1750613462614_completion_certificate.pdf"
+            target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
           </a>
         </div>
       </div>
@@ -557,7 +627,8 @@
             <h3 class="cert-wide-title">Virtual Internship – Edunet (with Shell)</h3>
           </div>
           <div class="cert-wide-right">
-            <p class="cert-wide-desc">Exposure to industry projects and workflows, bridging academic learning with real-world engineering practices.</p>
+            <p class="cert-wide-desc">Exposure to industry projects and workflows, bridging academic learning with
+              real-world engineering practices.</p>
             <img class="cert-logo cert-logo--wide" src="assets/shell.svg" alt="Shell" />
           </div>
         </div>
@@ -565,7 +636,7 @@
     </section>
 
     <!-- Links & Profiles -->
-    <section aria-labelledby="links-heading">
+    <section id="links" aria-labelledby="links-heading">
       <div class="section-header">
         <h2 class="section-title">
           Links &amp; Profiles
@@ -577,58 +648,53 @@
       </div>
 
       <div class="links-grid">
-        <a
-          class="link-card"
-          href="https://my-portfolio-red-phi-60.vercel.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a class="link-card" href="https://my-portfolio-red-phi-60.vercel.app/" target="_blank" rel="noreferrer">
           <div>
             <span class="link-label">Live Portfolio</span>
             <span class="link-sub">my-portfolio-red-phi-60.vercel.app</span>
           </div>
-            <span class="link-icon" aria-hidden="true">
-              <svg class="link-triangle" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18" style="margin-left:6px; fill:#ffffff;"><polygon points="12,17 6,9 18,9"/></svg>
-            </span>
+          <span class="link-icon" aria-hidden="true">
+            <svg class="link-triangle" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"
+              style="margin-left:6px; fill:#ffffff;">
+              <polygon points="12,17 6,9 18,9" />
+            </svg>
+          </span>
         </a>
 
-        <a
-          class="link-card"
-          href="https://www.linkedin.com/in/anvitnaik"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a class="link-card" href="https://www.linkedin.com/in/anvitnaik" target="_blank" rel="noreferrer">
           <div>
             <span class="link-label">LinkedIn</span>
             <span class="link-sub">/in/anvitnaik</span>
           </div>
-          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg></span>
         </a>
 
-        <a
-          class="link-card"
-          href="https://github.com/Anvitnaik-cloud"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a class="link-card" href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noreferrer">
           <div>
             <span class="link-label">GitHub</span>
             <span class="link-sub">Anvitnaik-cloud</span>
           </div>
-          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg></span>
+          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+            </svg></span>
         </a>
 
-        <a
-          class="link-card"
-          href="https://www.hackerrank.com/profile/anvitnaik470"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a class="link-card" href="https://www.hackerrank.com/profile/anvitnaik470" target="_blank" rel="noreferrer">
           <div>
             <span class="link-label">HackerRank</span>
             <span class="link-sub">/profile/anvitnaik470</span>
           </div>
-          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h10v2a5 5 0 01-5 5 5 5 0 01-5-5V3z"/><path d="M5 8v2a5 5 0 01-4 4v1h22v-1a5 5 0 01-4-4V8"/><path d="M9 21h6v-2H9z"/></svg></span>
+          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7 3h10v2a5 5 0 01-5 5 5 5 0 01-5-5V3z" />
+              <path d="M5 8v2a5 5 0 01-4 4v1h22v-1a5 5 0 01-4-4V8" />
+              <path d="M9 21h6v-2H9z" />
+            </svg></span>
         </a>
       </div>
     </section>
@@ -654,9 +720,15 @@
           <div class="contact-list">
             <div class="contact-item">
               <span>Email</span>
-              <strong><a href="mailto:anvitnaik470@gmail.com">anvitnaik470@gmail.com</a><a href="mailto:anvitnaik470@gmail.com" class="contact-verify" aria-label="Send email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></strong>
+              <strong><a href="mailto:anvitnaik470@gmail.com">anvitnaik470@gmail.com</a><a
+                  href="mailto:anvitnaik470@gmail.com" class="contact-verify" aria-label="Send email"><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg></a></strong>
             </div>
-            
+
             <div class="contact-item">
               <span>Location</span>
               <strong>Bengaluru, Karnataka, India</strong>
@@ -679,7 +751,8 @@
           </small>
           <ul>
             <li>
-              <strong>Web Development</strong> — responsive front-end interfaces and full-stack applications with Node.js &amp; databases.
+              <strong>Web Development</strong> — responsive front-end interfaces and full-stack applications with
+              Node.js &amp; databases.
             </li>
             <li>
               <strong>Python &amp; Data</strong> — automation scripts, analytics dashboards, and event management tools.
@@ -700,18 +773,28 @@
     <div class="footer-inner wrapper">
       <div class="social-icons" role="navigation" aria-label="Social links">
         <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/anvitnaik" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Anvit Naik">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.1c.65-1.2 2.25-2.5 4.63-2.5C22.5 7.7 24 10.3 24 14.2V24h-5v-8.1c0-1.9-.04-4.3-2.63-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-5V8z"/></svg>
+        <a href="https://www.linkedin.com/in/anvitnaik" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn - Anvit Naik">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.1c.65-1.2 2.25-2.5 4.63-2.5C22.5 7.7 24 10.3 24 14.2V24h-5v-8.1c0-1.9-.04-4.3-2.63-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-5V8z" />
+          </svg>
         </a>
 
         <!-- GitHub -->
-        <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Anvitnaik-cloud">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
+        <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub - Anvitnaik-cloud">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+          </svg>
         </a>
 
         <!-- Email (simple mail glyph) -->
         <a href="mailto:anvitnaik470@gmail.com" aria-label="Email Anvit">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M1.5 4.5h21v15h-21v-15zm2 2v11h17v-11l-8.5 5.5L3.5 6.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M1.5 4.5h21v15h-21v-15zm2 2v11h17v-11l-8.5 5.5L3.5 6.5z" />
+          </svg>
         </a>
       </div>
 
@@ -724,7 +807,10 @@
 
   <!-- Back to Top Button -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
   </button>
 
   <script>
@@ -770,7 +856,7 @@
 
   <!-- GSAP Library for Willem Loading Animation -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  
+
   <script>
     // Willem Loading Animation
     function initWillemLoadingAnimation() {
@@ -867,7 +953,9 @@
 
   <!-- Scroll Snap Drag Animation Script -->
   <script src="./scroll-snap.js"></script>
+
+  <!-- GSAP Hamburger Menu Animation -->\r\n
+  <script src="./hamburger-menu.js"></script>
 </body>
+
 </html>
-
-
