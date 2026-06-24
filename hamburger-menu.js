@@ -98,7 +98,9 @@
       // Scroll to section after menu close animation finishes
       setTimeout(() => {
         const target = document.querySelector(targetId);
-        if (target) {
+        if (target && typeof window.gotoSection === 'function') {
+          window.gotoSection(target);
+        } else if (target) {
           target.scrollIntoView({ behavior: 'smooth' });
         }
       }, 800);

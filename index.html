@@ -255,21 +255,18 @@
 
     <!-- Projects -->
     <section id="projects" aria-labelledby="projects-heading">
-      <!-- Top row: Header left + Travel card right -->
-      <div class="project-top-row fade-in-up">
-        <div class="project-top-left">
-          <div class="section-header">
-            <h2 class="section-title">
-              Projects
-              <span class="section-title-badge">Selected Work</span>
-            </h2>
-            <p class="section-subtitle">
-              A few projects that reflect my interest in web development, Python
-              applications, real-time systems, and AI-powered interactions.
-            </p>
-          </div>
-        </div>
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">
+          Projects
+          <span class="section-title-badge">Selected Work</span>
+        </h2>
+        <p class="section-subtitle">
+          A few projects that reflect my interest in web development, Python
+          applications, real-time systems, and AI-powered interactions.
+        </p>
+      </div>
 
+      <div class="project-grid fade-in-up">
         <article class="card project-card">
           <img src="./assets/Travel.webp" alt="Travel Explorer" class="project-card__img">
           <div class="project-card__content">
@@ -296,10 +293,7 @@
             </div>
           </div>
         </article>
-      </div>
 
-      <!-- Bottom row: 3 cards -->
-      <div class="project-bottom-row fade-in-up">
         <article class="card project-card fade-in-up">
           <img src="assets/Chat.jpg" alt="Realtime Chat Application" class="project-card__img">
           <div class="project-card__content">
@@ -523,9 +517,12 @@
     <!-- Certifications & Training -->
     <section id="certifications" aria-labelledby="certifications-heading">
       <div class="section-header fade-in-up">
-        <h2 class="section-title">
-          The Museum <br> of Certifications
-          <span class="section-title-badge">Learning</span>
+        <h2 class="section-title certifications-title">
+          <span class="title-line">The Museum of</span>
+          <span class="title-line-container">
+            <span class="title-line">Certifications</span>
+            <span class="section-title-badge">Learning</span>
+          </span>
         </h2>
         <p class="section-subtitle">
           Certifications and training programs that reflect my interest in
@@ -617,11 +614,9 @@
             </svg>
           </a>
         </div>
-      </div>
 
-      <!-- Virtual Internship - Wide Card -->
-      <div class="cert-wide fade-in-up">
-        <div class="cert-wide-card">
+        <!-- Virtual Internship - Wide Card inside grid -->
+        <div class="cert-wide-card fade-in-up">
           <div class="cert-wide-left">
             <span class="cert-year">2025</span>
             <h3 class="cert-wide-title">Virtual Internship – Edunet (with Shell)</h3>
@@ -639,7 +634,7 @@
     <section id="links" aria-labelledby="links-heading">
       <div class="section-header">
         <h2 class="section-title">
-          Links &amp; Profiles
+          Links and Profiles
           <span class="section-title-badge">Online</span>
         </h2>
         <p class="section-subtitle">
@@ -766,44 +761,140 @@
           </p>
         </div>
       </div>
+      <!-- Footer Inside Contact Section -->
+      <!-- Footer Inside Contact Section -->
+      <footer>
+        <div class="footer-glass-container">
+          <div class="footer-grid">
+            <!-- Column 1: Personal Brand -->
+            <div class="footer-brand">
+              <h3 class="footer-brand-name">Anvit Naik</h3>
+              <p class="footer-brand-title">Computer Science Student • Full Stack Developer • AI Enthusiast</p>
+              <p class="footer-brand-desc">Building scalable applications, AI-powered solutions, and intuitive digital
+                experiences.</p>
+              <div class="footer-socials">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/anvitnaik" target="_blank" rel="noopener noreferrer"
+                  aria-label="LinkedIn - Anvit Naik">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.1c.65-1.2 2.25-2.5 4.63-2.5C22.5 7.7 24 10.3 24 14.2V24h-5v-8.1c0-1.9-.04-4.3-2.63-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-5V8z" />
+                  </svg>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                  aria-label="GitHub - Anvitnaik-cloud">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                  </svg>
+                </a>
+                <!-- Email -->
+                <a href="mailto:anvitnaik470@gmail.com" aria-label="Email Anvit">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M1.5 4.5h21v15h-21v-15zm2 2v11h17v-11l-8.5 5.5L3.5 6.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Column 2: Curated Projects -->
+            <div class="footer-projects">
+              <h4 class="footer-heading">Featured Projects</h4>
+              <ul class="footer-project-list">
+                <li>
+                  <a href="#projects" class="footer-project-link">
+                    <span>Student Information Management System</span>
+                    <svg class="footer-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#projects" class="footer-project-link">
+                    <span>Event Scheduler</span>
+                    <svg class="footer-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#projects" class="footer-project-link">
+                    <span>Travel Explorer</span>
+                    <svg class="footer-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#projects" class="footer-project-link">
+                    <span>Spotify Clone</span>
+                    <svg class="footer-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#projects" class="footer-project-link">
+                    <span>AI Chatbot</span>
+                    <svg class="footer-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Contact -->
+            <div class="footer-contact">
+              <h4 class="footer-heading">Let's Build Something Amazing Together</h4>
+              <div class="footer-contact-info">
+                <span>📍 Bengaluru, Karnataka, India</span>
+                <a href="mailto:anvitnaik470@gmail.com" class="footer-email-link">📧 anvitnaik470@gmail.com</a>
+              </div>
+              <p class="footer-contact-status">Available for internships, freelance projects, and collaborations.</p>
+              <div class="footer-actions">
+                <a href="assets/resume.pdf" download class="btn footer-btn btn-primary">
+                  <span>Resume</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" width="16" height="16">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                </a>
+                <a href="mailto:anvitnaik470@gmail.com" class="btn footer-btn btn-ghost">
+                  <span>Contact Me</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" width="16" height="16">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <hr class="footer-divider">
+
+          <div class="footer-bottom">
+            <p class="footer-copyright">© <span id="year">2026</span> Anvit Naik. All Rights Reserved.</p>
+            <p class="footer-tagline">Built with Passion, Curiosity, and Late-Night Coffee ☕</p>
+          </div>
+        </div>
+      </footer>
     </section>
   </main>
-
-  <footer>
-    <div class="footer-inner wrapper">
-      <div class="social-icons" role="navigation" aria-label="Social links">
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/anvitnaik" target="_blank" rel="noopener noreferrer"
-          aria-label="LinkedIn - Anvit Naik">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path
-              d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.1c.65-1.2 2.25-2.5 4.63-2.5C22.5 7.7 24 10.3 24 14.2V24h-5v-8.1c0-1.9-.04-4.3-2.63-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-5V8z" />
-          </svg>
-        </a>
-
-        <!-- GitHub -->
-        <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
-          aria-label="GitHub - Anvitnaik-cloud">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path
-              d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
-          </svg>
-        </a>
-
-        <!-- Email (simple mail glyph) -->
-        <a href="mailto:anvitnaik470@gmail.com" aria-label="Email Anvit">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M1.5 4.5h21v15h-21v-15zm2 2v11h17v-11l-8.5 5.5L3.5 6.5z" />
-          </svg>
-        </a>
-      </div>
-
-      <p>
-        © <span id="year"></span> Anvit Naik. Built with Passion and late Night Coffee for learning and to Kill
-        Boredom.
-      </p>
-    </div>
-  </footer>
 
   <!-- Back to Top Button -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
@@ -816,46 +907,12 @@
   <script>
     // Dynamic year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Intersection Observer for scroll-triggered animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    // Observe all animated elements
-    const animatedElements = document.querySelectorAll(
-      '.fade-in-up, .fade-in-down, .fade-in, .slide-in-left, .slide-in-right'
-    );
-    animatedElements.forEach((element) => {
-      observer.observe(element);
-    });
-
-    // Back to Top button
-    const backToTopBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        backToTopBtn.classList.add('visible');
-      } else {
-        backToTopBtn.classList.remove('visible');
-      }
-    });
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
   </script>
 
   <!-- GSAP Library for Willem Loading Animation -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Observer.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script>
 
   <script>
     // Willem Loading Animation
@@ -881,8 +938,10 @@
           // Show content after animation
           document.body.classList.remove('loading-mode');
           document.body.classList.add('loaded');
+          document.documentElement.classList.add('loaded');
           container.classList.add('is--hidden');
-          document.documentElement.style.overflow = 'auto';
+          document.documentElement.style.overflow = 'hidden';
+          window.dispatchEvent(new Event('loaderComplete'));
         }
       });
 
@@ -954,7 +1013,7 @@
   <!-- Scroll Snap Drag Animation Script -->
   <script src="./scroll-snap.js"></script>
 
-  <!-- GSAP Hamburger Menu Animation -->\r\n
+  <!-- GSAP Hamburger Menu Animation -->
   <script src="./hamburger-menu.js"></script>
 </body>
 
