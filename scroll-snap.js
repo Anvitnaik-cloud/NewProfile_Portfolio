@@ -125,14 +125,15 @@ if (typeof gsap === 'undefined' || typeof Observer === 'undefined') {
   // Set initial states
   let currentIndex = -1;
   let animating = false;
-  const wrap = gsap.utils.wrap(0, sections.length);
 
   gsap.set(outerWrappers, { yPercent: 100 });
   gsap.set(innerWrappers, { yPercent: -100 });
 
   // Primary transition function
   function gotoSection(index, direction) {
-    index = wrap(index); // Validate index
+    if (index < 0 || index >= sections.length) {
+      return;
+    }
     animating = true;
     
     const fromTop = direction === -1;
@@ -225,7 +226,8 @@ if (typeof gsap === 'undefined' || typeof Observer === 'undefined') {
     const activeBg = bgs[currentIndex];
     if (!activeBg) return;
 
-    const isScrollable = activeBg.scrollHeight > activeBg.clientHeight + 5;
+    const style = window.getComputedStyle(activeBg);
+    const isScrollable = (style.overflowY !== 'hidden') && (activeBg.scrollHeight > activeBg.clientHeight + 5);
     if (!isScrollable) {
       gotoSection(direction === 1 ? currentIndex + 1 : currentIndex - 1, direction);
       return;
