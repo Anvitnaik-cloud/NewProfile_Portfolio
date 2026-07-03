@@ -334,6 +334,8 @@ if (typeof gsap === 'undefined' || typeof Observer === 'undefined') {
     }
   }
 
+
+
   // Setup custom back-to-top click handler
   const backToTopBtn = document.getElementById('backToTop');
   if (backToTopBtn) {

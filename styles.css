@@ -62,18 +62,18 @@ body.loading-mode>footer {
   display: none !important;
 }
 
-body.loading-mode .nav-logo-fixed,
+body.loading-mode .section-logo,
 body.loading-mode .hamburger-menu {
   display: none !important;
   visibility: hidden !important;
 }
 
-.nav-logo-fixed,
+.section-logo,
 .hamburger-menu {
   visibility: visible;
 }
 
-body:not(.loaded) .nav-logo-fixed,
+body:not(.loaded) .section-logo,
 body:not(.loaded) .hamburger-menu {
   display: none !important;
   visibility: hidden !important;
@@ -324,7 +324,13 @@ body.scroll-dragging main section {
   font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition: opacity 0.2s ease;
+  transition: color 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              text-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.2s ease;
+}
+
+.nav-logo-dot {
+  transition: color 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .nav-logo-fixed:hover .nav-logo {
@@ -694,114 +700,202 @@ section#skills .section-subtitle {
 
 /* ===== PROJECTS SECTION ===== */
 
-/* Project two-row layout */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
-  width: 100%;
-  box-sizing: border-box;
+section#projects .section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-@media (min-width: 1025px) {
-  .project-card__img {
-    height: 120px !important;
-  }
-  .project-card__content {
-    padding: 1.1rem !important;
-  }
-  .card-tags {
-    padding-top: 0.6rem !important;
-  }
+section#projects .section-header-left {
+  flex: 1;
+}
+
+section#projects .carousel-nav-buttons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+section#projects .carousel-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid #0F0F0F;
+  color: #0F0F0F;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  padding: 0;
+}
+
+section#projects .carousel-nav-btn:hover:not(:disabled) {
+  background: #eab308;
+  border-color: #eab308;
+  transform: scale(1.08);
+}
+
+section#projects .carousel-nav-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+section#projects .carousel-nav-btn svg {
+  display: block;
+}
+
+.projects-carousel-container {
+  width: 100%;
+  position: relative;
+}
+
+.projects-carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+  gap: 1.5rem;
+  padding: 0.5rem 20% 1.5rem 20%; /* Start the first card after 20% space on the left and add padding-right */
+  scroll-padding-left: 20%; /* Snap to the 20% start offset */
+}
+
+.projects-carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
 }
 
 .project-card {
-  background: #f8f9fa;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  flex: 0 0 calc(26.666% - 1.15rem); /* Display exactly three cards inside the remaining 80% space */
+  min-width: 320px;
+  scroll-snap-align: start;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease;
+  position: relative;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.22);
 }
 
-.project-card__img {
+.project-card__img-wrapper {
+  position: relative;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
+  padding-top: 45%; /* Cinematic aspect ratio (shorter height) */
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 50%, #a5b4fc 100%);
 }
 
+.project-card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-card:hover .project-card__img {
+  transform: scale(1.06);
+}
+
 .project-card__content {
-  padding: 1.5rem;
+  padding: 1.25rem; /* Tightened padding */
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.card-header {
+.project-card .card-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem; /* Tightened spacing */
 }
 
-.card-meta {
+.project-card .card-title {
+  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+}
+
+.project-card .card-meta {
   font-size: 0.8rem;
   color: #555;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem; /* Tightened spacing */
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
+  font-weight: 500;
 }
 
-.card-body {
+.project-card .card-body {
   font-size: 0.9rem;
-  color: #1a1a1a;
+  color: #333;
   line-height: 1.6;
+  margin-bottom: 1rem; /* Tightened spacing */
 }
 
-.chip {
-  font-size: 0.7rem;
-  padding: 0.2rem 0.65rem;
+.project-card .chip {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   color: #1a1a1a;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   white-space: nowrap;
   background: #e5e7eb;
 }
 
-.card-tags {
-  margin-top: auto;
-  padding-top: 1rem;
+.project-card .card-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  margin-top: auto; /* Push the tags to the bottom of the card body area */
+  margin-bottom: 0.75rem; /* Spacing before the footer divider line */
 }
 
-.card-tag {
-  padding: 0.25rem 0.65rem;
+.project-card .card-tag {
+  padding: 0.2rem 0.6rem;
   border-radius: 999px;
-  background: #e5e7eb;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  color: #1a1a1a;
-  font-size: 0.75rem;
+  background: #f3f4f6;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #555;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .project-card__footer {
+  padding-top: 0.75rem; /* Tightened padding */
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end; /* Align the GitHub link to the right */
+  height: 36px; /* Exactly match the height of the GitHub icon button */
+  box-sizing: content-box;
 }
 
 .project-github-link {
@@ -819,12 +913,68 @@ section#skills .section-subtitle {
 
 .project-github-link:hover {
   background: #333;
-  transform: scale(1.15);
+  transform: scale(1.12);
 }
 
 .project-github-link svg {
   width: 18px;
   height: 18px;
+  fill: currentColor;
+}
+
+section#projects .carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+section#projects .carousel-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+section#projects .carousel-dots .dot.active {
+  width: 24px;
+  border-radius: 4px;
+  background: #0F0F0F;
+}
+
+/* Responsiveness overrides for the carousel */
+@media (max-width: 1024px) {
+  .projects-carousel-track {
+    padding-left: 0;
+    padding-right: 0;
+    scroll-padding-left: 0;
+  }
+  .project-card {
+    flex: 0 0 calc(50% - 0.75rem); /* 2 cards visible on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  section#projects .section-header {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-carousel-track {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    scroll-padding-left: 7.5%;
+  }
+  .project-card {
+    flex: 0 0 85%; /* Centered mobile card taking 85% width, showing 7.5% previews on both sides */
+    min-width: unset;
+  }
+  section#projects .carousel-nav-buttons {
+    display: none; /* Swipe is native and preferred on mobile */
+  }
 }
 
 /* ===== EXPERIENCE SECTION ===== */
@@ -3097,4 +3247,93 @@ body.transitions-enabled .section-header {
   .cert-wide-card {
     grid-column: span 1;
   }
+}
+
+/* ===== STATIC SECTION LOGOS ===== */
+
+.section-logo {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  z-index: 10;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.section-logo .nav-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+.section-logo:hover .nav-logo {
+  opacity: 0.7;
+}
+
+/* Light Background Section Themes (Dark Logo) */
+.logo-hero .nav-logo,
+.logo-projects .nav-logo,
+.logo-education .nav-logo,
+.logo-certifications .nav-logo,
+.logo-links .nav-logo {
+  color: #050816 !important;
+  text-shadow: 0 1px 4px rgba(5, 8, 22, 0.05);
+}
+
+/* Dark Background Section Themes (Light Logo) */
+.logo-about .nav-logo,
+.logo-skills .nav-logo,
+.logo-experience .nav-logo,
+.logo-contact .nav-logo {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* Section Specific Dot Accent Colors */
+.logo-hero .nav-logo-dot {
+  color: #a855f7 !important;
+}
+
+.logo-about .nav-logo-dot {
+  color: #38bdf8 !important;
+}
+
+.logo-skills .nav-logo-dot {
+  color: #eab308 !important;
+}
+
+.logo-projects .nav-logo-dot {
+  color: #2563EB !important;
+}
+
+.logo-experience .nav-logo-dot {
+  color: #ff5a36 !important;
+}
+
+.logo-education .nav-logo-dot {
+  color: #4f46e5 !important;
+}
+
+.logo-certifications .nav-logo-dot {
+  color: #0d9488 !important;
+}
+
+.logo-links .nav-logo-dot {
+  color: #db2777 !important;
+}
+
+.logo-contact .nav-logo-dot {
+  color: #10b981 !important;
+}
+
+/* Hide logos during load */
+body.loading-mode .section-logo,
+body:not(.loaded) .section-logo {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }

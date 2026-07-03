@@ -49,10 +49,7 @@
     </div>
   </section>
 
-  <!-- AN. Logo (fixed top-left) -->
-  <a href="#top" class="nav-logo-fixed" id="nav-logo-fixed">
-    <span class="nav-logo">AN.</span>
-  </a>
+
 
   <!-- Hamburger Menu Button (always visible, top-right fixed) -->
   <div id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu" role="button" tabindex="0">
@@ -94,6 +91,9 @@
   <main id="top" class="wrapper">
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-heading">
+      <a href="#top" class="section-logo logo-hero">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="hero-grid">
         <div class="hero-left">
           <div class="hero-pill fade-in-down">
@@ -144,6 +144,9 @@
 
     <!-- About -->
     <section id="about" aria-labelledby="about-heading">
+      <a href="#top" class="section-logo logo-about">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header fade-in-up">
         <h2 class="section-title">
           About
@@ -175,6 +178,9 @@
 
     <!-- Skills -->
     <section id="skills" aria-labelledby="skills-heading">
+      <a href="#top" class="section-logo logo-skills">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header fade-in-up">
         <h2 class="section-title">
           Skills
@@ -255,132 +261,273 @@
 
     <!-- Projects -->
     <section id="projects" aria-labelledby="projects-heading">
+      <a href="#top" class="section-logo logo-projects">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header fade-in-up">
-        <h2 class="section-title">
-          Projects
-          <span class="section-title-badge">Selected Work</span>
-        </h2>
-        <p class="section-subtitle">
-          A few projects that reflect my interest in web development, Python
-          applications, real-time systems, and AI-powered interactions.
-        </p>
+        <div class="section-header-left">
+          <h2 class="section-title">
+            Projects
+            <span class="section-title-badge">Selected Work</span>
+          </h2>
+          <p class="section-subtitle">
+            A few projects that reflect my interest in web development, Python
+            applications, real-time systems, and AI-powered interactions.
+          </p>
+        </div>
+        <div class="carousel-nav-buttons">
+          <button class="carousel-nav-btn prev-btn" aria-label="Previous Project">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          </button>
+          <button class="carousel-nav-btn next-btn" aria-label="Next Project">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
       </div>
-
-      <div class="project-grid fade-in-up">
-        <article class="card project-card">
-          <img src="./assets/Travel.webp" alt="Travel Explorer" class="project-card__img">
-          <div class="project-card__content">
-            <div class="card-header">
-              <h3 class="card-title">Travel Explorer</h3>
-              <span class="chip">Front-End</span>
+      <div class="projects-carousel-container fade-in-up">
+        <div class="projects-carousel-track">
+          <article class="card project-card">
+            <div class="project-card__img-wrapper">
+              <img src="./assets/Travel.webp" alt="Travel Explorer" class="project-card__img">
             </div>
-            <div class="card-meta">HTML • CSS • JavaScript</div>
-            <div class="card-body">
-              <p>Interactive web app for exploring travel destinations with a responsive, engaging UI.</p>
-            </div>
-            <div class="project-card__footer">
+            <div class="project-card__content">
+              <div class="card-header">
+                <h3 class="card-title">Travel Explorer</h3>
+                <span class="chip">Front-End</span>
+              </div>
+              <div class="card-meta">HTML • CSS • JavaScript</div>
+              <div class="card-body">
+                <p>Interactive web app for exploring travel destinations with a responsive, engaging UI.</p>
+              </div>
               <div class="card-tags">
                 <span class="card-tag">Responsive Design</span>
                 <span class="card-tag">UX</span>
               </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
-                class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path
-                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
-                </svg>
-              </a>
+              <div class="project-card__footer">
+                <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                  class="project-github-link" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="card project-card fade-in-up">
-          <img src="assets/Chat.jpg" alt="Realtime Chat Application" class="project-card__img">
-          <div class="project-card__content">
-            <div class="card-header">
-              <h3 class="card-title">Realtime Chat App</h3>
-              <span class="chip">Full-Stack</span>
+          <article class="card project-card">
+            <div class="project-card__img-wrapper">
+              <img src="assets/Chat.jpg" alt="Realtime Chat Application" class="project-card__img">
             </div>
-            <div class="card-meta">Node.js • Socket.IO</div>
-            <div class="card-body">
-              <p>Real-time chat with auth, private/group messaging, typing indicators, and delivery status.</p>
-            </div>
-            <div class="project-card__footer">
+            <div class="project-card__content">
+              <div class="card-header">
+                <h3 class="card-title">Realtime Chat App</h3>
+                <span class="chip">Full-Stack</span>
+              </div>
+              <div class="card-meta">Node.js • Socket.IO</div>
+              <div class="card-body">
+                <p>Real-time chat with auth, private/group messaging, typing indicators, and delivery status.</p>
+              </div>
               <div class="card-tags">
-                <span class="card-tag">Realtime</span>
                 <span class="card-tag">Socket.IO</span>
                 <span class="card-tag">Node.js</span>
               </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
-                class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path
-                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
-                </svg>
-              </a>
+              <div class="project-card__footer">
+                <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                  class="project-github-link" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="card project-card fade-in-up">
-          <img src="assets/event.webp" alt="Event Scheduler" class="project-card__img">
-          <div class="project-card__content">
-            <div class="card-header">
-              <h3 class="card-title">Event Scheduler</h3>
-              <span class="chip">Python</span>
+          <article class="card project-card">
+            <div class="project-card__img-wrapper">
+              <img src="assets/event.webp" alt="Event Scheduler" class="project-card__img">
             </div>
-            <div class="card-meta">Python</div>
-            <div class="card-body">
-              <p>Python app for managing events and schedules with streamlined admin workflows.</p>
-            </div>
-            <div class="project-card__footer">
+            <div class="project-card__content">
+              <div class="card-header">
+                <h3 class="card-title">Event Scheduler</h3>
+                <span class="chip">Python</span>
+              </div>
+              <div class="card-meta">Python</div>
+              <div class="card-body">
+                <p>Python app for managing events and schedules with streamlined admin workflows.</p>
+              </div>
               <div class="card-tags">
                 <span class="card-tag">Python</span>
                 <span class="card-tag">CLI / GUI</span>
               </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
-                class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path
-                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
-                </svg>
-              </a>
+              <div class="project-card__footer">
+                <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                  class="project-github-link" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="card project-card fade-in-up">
-          <img src="assets/AI cover.jpg" alt="Multimodal Chatbot" class="project-card__img">
-          <div class="project-card__content">
-            <div class="card-header">
-              <h3 class="card-title">Multimodal Chatbot</h3>
-              <span class="chip">AI • GenAI</span>
+          <article class="card project-card">
+            <div class="project-card__img-wrapper">
+              <img src="assets/AI cover.jpg" alt="Multimodal Chatbot" class="project-card__img">
             </div>
-            <div class="card-meta">Python • Streamlit • MongoDB Atlas</div>
-            <div class="card-body">
-              <p>AI chatbot processing text and visual inputs with LLMs, persistent storage, and Streamlit UI.</p>
-            </div>
-            <div class="project-card__footer">
+            <div class="project-card__content">
+              <div class="card-header">
+                <h3 class="card-title">Multimodal Chatbot</h3>
+                <span class="chip">AI • GenAI</span>
+              </div>
+              <div class="card-meta">Python • Streamlit • MongoDB Atlas</div>
+              <div class="card-body">
+                <p>AI chatbot processing text and visual inputs with LLMs, persistent storage, and Streamlit UI.</p>
+              </div>
               <div class="card-tags">
                 <span class="card-tag">LLMs</span>
                 <span class="card-tag">RAG</span>
                 <span class="card-tag">Streamlit</span>
               </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
-                class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path
-                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
-                </svg>
-              </a>
+              <div class="project-card__footer">
+                <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                  class="project-github-link" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
+
+        <div class="carousel-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const track = document.querySelector('.projects-carousel-track');
+          const cards = document.querySelectorAll('.projects-carousel-track .project-card');
+          const dots = document.querySelectorAll('.carousel-dots .dot');
+          const prevBtn = document.querySelector('.carousel-nav-btn.prev-btn');
+          const nextBtn = document.querySelector('.carousel-nav-btn.next-btn');
+
+          if (!track || cards.length === 0) return;
+
+          let currentIndex = 0;
+
+          const getVisibleCardsCount = () => {
+            const style = window.getComputedStyle(track);
+            const paddingLeft = parseFloat(style.paddingLeft || 0);
+            const trackWidth = track.getBoundingClientRect().width - paddingLeft;
+            const cardWidth = cards[0].getBoundingClientRect().width;
+            const gap = parseFloat(style.gap || 0);
+            return Math.max(1, Math.round((trackWidth + gap) / (cardWidth + gap)));
+          };
+
+          const getMaxIndex = () => {
+            return Math.max(0, cards.length - getVisibleCardsCount());
+          };
+
+          const updateCarousel = () => {
+            const maxIndex = getMaxIndex();
+            
+            if (currentIndex > maxIndex) {
+              currentIndex = maxIndex;
+            }
+
+            dots.forEach((dot, idx) => {
+              if (idx > maxIndex) {
+                dot.style.display = 'none';
+              } else {
+                dot.style.display = 'inline-block';
+              }
+              dot.classList.toggle('active', idx === currentIndex);
+            });
+
+            if (prevBtn) prevBtn.disabled = currentIndex === 0;
+            if (nextBtn) nextBtn.disabled = currentIndex >= maxIndex;
+          };
+
+          const scrollToCard = (index) => {
+            const maxIndex = getMaxIndex();
+            let targetIndex = Math.min(Math.max(0, index), maxIndex);
+            currentIndex = targetIndex;
+            
+            const cardWidth = cards[0].getBoundingClientRect().width;
+            const gap = parseFloat(window.getComputedStyle(track).gap || 0);
+            const targetScrollLeft = currentIndex * (cardWidth + gap);
+            
+            track.scrollTo({
+              left: targetScrollLeft,
+              behavior: 'smooth'
+            });
+            updateCarousel();
+          };
+
+          // Scroll listener to update dots when user swipes on touch/trackpad devices
+          let scrollTimeout;
+          track.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+              const cardWidth = cards[0].getBoundingClientRect().width;
+              const gap = parseFloat(window.getComputedStyle(track).gap || 0);
+              const scrollLeft = track.scrollLeft;
+              
+              const newIndex = Math.round(scrollLeft / (cardWidth + gap));
+              const maxIndex = getMaxIndex();
+              const targetIndex = Math.min(newIndex, maxIndex);
+              
+              if (targetIndex >= 0 && targetIndex !== currentIndex) {
+                currentIndex = targetIndex;
+                updateCarousel();
+              }
+            }, 50);
+          });
+
+          if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+              if (currentIndex > 0) {
+                scrollToCard(currentIndex - 1);
+              }
+            });
+          }
+
+          if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+              if (currentIndex < getMaxIndex()) {
+                scrollToCard(currentIndex + 1);
+              }
+            });
+          }
+
+          dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+              scrollToCard(idx);
+            });
+          });
+
+          window.addEventListener('resize', updateCarousel);
+
+          updateCarousel();
+        });
+      </script>
     </section>
 
     <!-- Experience & Activities -->
     <section id="experience" aria-labelledby="experience-heading">
+      <a href="#top" class="section-logo logo-experience">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header fade-in-up">
         <h2 class="section-title">
           Experience
@@ -477,6 +624,9 @@
 
     <!-- Education -->
     <section id="education" aria-labelledby="education-heading">
+      <a href="#top" class="section-logo logo-education">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="deco-letter">a.</div>
       <div class="section-header fade-in-up">
         <h2 class="section-title">
@@ -517,6 +667,9 @@
 
     <!-- Certifications & Training -->
     <section id="certifications" aria-labelledby="certifications-heading">
+      <a href="#top" class="section-logo logo-certifications">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header fade-in-up">
         <h2 class="section-title certifications-title">
           <span class="title-line">The Museum of</span>
@@ -633,6 +786,9 @@
 
     <!-- Links & Profiles -->
     <section id="links" aria-labelledby="links-heading">
+      <a href="#top" class="section-logo logo-links">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header">
         <h2 class="section-title">
           Links and Profiles
@@ -781,6 +937,9 @@
 
     <!-- Contact -->
     <section id="contact" aria-labelledby="contact-heading">
+      <a href="#top" class="section-logo logo-contact">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header fade-in-up">
         <h2 class="section-title">
           Contact
