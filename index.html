@@ -172,8 +172,10 @@
           volunteer at college events. I’m currently seeking internship
           opportunities where I can contribute, learn from real-world projects,
           and grow as a full-stack and AI-driven developer.
-        </p>
       </article>
+
+      <!-- ScrollVelocity React Root -->
+      <div id="scroll-velocity-root" class="fade-in-up"></div>
     </section>
 
     <!-- Skills -->
@@ -277,10 +279,16 @@
         </div>
         <div class="carousel-nav-buttons">
           <button class="carousel-nav-btn prev-btn" aria-label="Previous Project">
-            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
           </button>
           <button class="carousel-nav-btn next-btn" aria-label="Next Project">
-            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
           </button>
         </div>
       </div>
@@ -405,12 +413,12 @@
         </div>
       </div>
 
-        <div class="carousel-dots">
-          <span class="dot active" data-index="0"></span>
-          <span class="dot" data-index="1"></span>
-          <span class="dot" data-index="2"></span>
-          <span class="dot" data-index="3"></span>
-        </div>
+      <div class="carousel-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+      </div>
       </div>
 
       <script>
@@ -440,7 +448,7 @@
 
           const updateCarousel = () => {
             const maxIndex = getMaxIndex();
-            
+
             if (currentIndex > maxIndex) {
               currentIndex = maxIndex;
             }
@@ -462,11 +470,11 @@
             const maxIndex = getMaxIndex();
             let targetIndex = Math.min(Math.max(0, index), maxIndex);
             currentIndex = targetIndex;
-            
+
             const cardWidth = cards[0].getBoundingClientRect().width;
             const gap = parseFloat(window.getComputedStyle(track).gap || 0);
             const targetScrollLeft = currentIndex * (cardWidth + gap);
-            
+
             track.scrollTo({
               left: targetScrollLeft,
               behavior: 'smooth'
@@ -482,11 +490,11 @@
               const cardWidth = cards[0].getBoundingClientRect().width;
               const gap = parseFloat(window.getComputedStyle(track).gap || 0);
               const scrollLeft = track.scrollLeft;
-              
+
               const newIndex = Math.round(scrollLeft / (cardWidth + gap));
               const maxIndex = getMaxIndex();
               const targetIndex = Math.min(newIndex, maxIndex);
-              
+
               if (targetIndex >= 0 && targetIndex !== currentIndex) {
                 currentIndex = targetIndex;
                 updateCarousel();
@@ -1166,6 +1174,181 @@
 
   <!-- Scroll Snap Drag Animation Script -->
   <script src="./scroll-snap.js"></script>
+
+  <!-- React and ScrollVelocity Component Integration -->
+  <script type="module">
+    import React, { useRef, useLayoutEffect, useState } from 'https://esm.sh/react@18';
+    import ReactDOM from 'https://esm.sh/react-dom@18/client';
+    import {
+      motion,
+      useScroll,
+      useSpring,
+      useTransform,
+      useMotionValue,
+      useVelocity,
+      useAnimationFrame
+    } from 'https://esm.sh/framer-motion@11.11.17';
+
+    function useElementWidth(ref) {
+      const [width, setWidth] = useState(0);
+
+      useLayoutEffect(() => {
+        if (!ref.current) return;
+
+        const updateWidth = () => {
+          if (ref.current) {
+            setWidth(ref.current.offsetWidth);
+          }
+        };
+
+        const observer = new ResizeObserver(() => {
+          updateWidth();
+        });
+
+        observer.observe(ref.current);
+        window.addEventListener('resize', updateWidth);
+
+        return () => {
+          observer.disconnect();
+          window.removeEventListener('resize', updateWidth);
+        };
+      }, [ref]);
+
+      return width;
+    }
+
+    const ScrollVelocity = ({
+      scrollContainerRef,
+      texts = [],
+      velocity = 100,
+      className = '',
+      damping = 50,
+      stiffness = 400,
+      numCopies = 6,
+      velocityMapping = { input: [0, 1000], output: [0, 5] },
+      parallaxClassName = 'parallax',
+      scrollerClassName = 'scroller',
+      parallaxStyle,
+      scrollerStyle
+    }) => {
+      function VelocityText({
+        children,
+        baseVelocity = velocity,
+        scrollContainerRef,
+        className = '',
+        damping,
+        stiffness,
+        numCopies,
+        velocityMapping,
+        parallaxClassName,
+        scrollerClassName,
+        parallaxStyle,
+        scrollerStyle
+      }) {
+        const baseX = useMotionValue(0);
+        const scrollOptions = scrollContainerRef ? { container: scrollContainerRef } : {};
+        const { scrollY } = useScroll(scrollOptions);
+        const scrollVelocity = useVelocity(scrollY);
+        const smoothVelocity = useSpring(scrollVelocity, {
+          damping: damping ?? 50,
+          stiffness: stiffness ?? 400
+        });
+        const velocityFactor = useTransform(
+          smoothVelocity,
+          velocityMapping?.input || [0, 1000],
+          velocityMapping?.output || [0, 5],
+          { clamp: false }
+        );
+
+        const copyRef = useRef(null);
+        const copyWidth = useElementWidth(copyRef);
+
+        function wrap(min, max, v) {
+          const range = max - min;
+          const mod = (((v - min) % range) + range) % range;
+          return mod + min;
+        }
+
+        const x = useTransform(baseX, v => {
+          if (copyWidth === 0) return '0px';
+          return `${wrap(-copyWidth, 0, v)}px`;
+        });
+
+        const directionFactor = useRef(1);
+        useAnimationFrame((t, delta) => {
+          let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+
+          if (velocityFactor.get() < 0) {
+            directionFactor.current = -1;
+          } else if (velocityFactor.get() > 0) {
+            directionFactor.current = 1;
+          }
+
+          moveBy += directionFactor.current * moveBy * velocityFactor.get();
+          baseX.set(baseX.get() + moveBy);
+        });
+
+        const spans = [];
+        for (let i = 0; i < numCopies; i++) {
+          spans.push(
+            React.createElement('span', {
+              className: className,
+              key: i,
+              ref: i === 0 ? copyRef : null
+            }, children, '\u00A0')
+          );
+        }
+
+        return (
+          React.createElement('div', {
+            className: parallaxClassName,
+            style: parallaxStyle
+          },
+            React.createElement(motion.div, {
+              className: scrollerClassName,
+              style: { x, ...scrollerStyle }
+            }, spans)
+          )
+        );
+      }
+
+      return (
+        React.createElement('div', null,
+          texts.map((text, index) => (
+            React.createElement(VelocityText, {
+              key: index,
+              className: className,
+              baseVelocity: index % 2 !== 0 ? -velocity : velocity,
+              scrollContainerRef: scrollContainerRef,
+              damping: damping,
+              stiffness: stiffness,
+              numCopies: numCopies,
+              velocityMapping: velocityMapping,
+              parallaxClassName: parallaxClassName,
+              scrollerClassName: scrollerClassName,
+              parallaxStyle: parallaxStyle,
+              scrollerStyle: scrollerStyle
+            }, text)
+          ))
+        )
+      );
+    };
+
+    const rootEl = document.getElementById('scroll-velocity-root');
+    if (rootEl) {
+      const root = ReactDOM.createRoot(rootEl);
+      root.render(
+        React.createElement(ScrollVelocity, {
+          texts: [
+            'Designer • Full Stack • GenAI • Python •',
+            'Creative Coder • Problem Solver • Leadership •'
+          ],
+          velocity: 60,
+          className: 'custom-scroll-text'
+        })
+      );
+    }
+  </script>
 
   <!-- GSAP Hamburger Menu Animation -->
   <script src="./hamburger-menu.js"></script>
