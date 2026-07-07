@@ -402,7 +402,6 @@ section:nth-of-type(n+3) {
 
 /* ===== CONTENT SECTIONS ===== */
 
-section#experience,
 section#contact {
   padding: 60px 5% 140px;
   max-width: 1400px;
@@ -426,6 +425,7 @@ section#about .section-header {
 
 section#skills,
 section#projects,
+section#experience,
 section#certifications,
 section#links,
 section#education {
@@ -1049,6 +1049,83 @@ section#projects .carousel-dots .dot.active {
 
 /* ===== EXPERIENCE SECTION ===== */
 
+section#experience {
+  background:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.045) 0px, rgba(255, 255, 255, 0.045) 1px, transparent 1px, transparent 36px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.045) 0px, rgba(255, 255, 255, 0.045) 1px, transparent 1px, transparent 36px),
+    #121212;
+}
+
+section#experience .section-title {
+  color: #E05C35 !important;
+}
+
+section#experience .section-title-badge {
+  color: #E05C35 !important;
+  border-color: rgba(224, 92, 53, 0.45) !important;
+}
+
+section#experience .section-header {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#experience .card {
+  background: rgba(255, 255, 255, 0.025) !important;
+  border-radius: var(--radius-xl) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+}
+
+#experience .card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+#experience .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+#experience .card-title {
+  color: #E05C35 !important;
+  margin-bottom: 0;
+}
+
+#experience .card-meta {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+}
+
+#experience .card-body p {
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+#experience .chip {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
 .timeline {
   display: flex;
   flex-direction: column;
@@ -1091,6 +1168,27 @@ section#projects .carousel-dots .dot.active {
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.6;
+}
+
+/* Experience section timeline overrides to match about theme */
+#experience .timeline-item {
+  border-left: 2px solid rgba(224, 92, 53, 0.25) !important;
+}
+
+#experience .timeline-item::before {
+  background: #E05C35 !important;
+}
+
+#experience .timeline-title {
+  color: #ffffff !important;
+}
+
+#experience .timeline-meta {
+  color: #9ca3af !important;
+}
+
+#experience .timeline-item p {
+  color: #e5e7eb !important;
 }
 
 /* ===== EDUCATION SECTION ===== */
@@ -3434,12 +3532,12 @@ body.transitions-enabled #education .bg {
     #FBF3EA !important;
 }
 
-body.transitions-enabled #experience .bg,
 body.transitions-enabled #contact .bg {
   background: var(--bg) !important;
   /* #050816 */
 }
 
+body.transitions-enabled #experience .bg,
 body.transitions-enabled #about .bg {
   background:
     url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E"),
@@ -3692,13 +3790,16 @@ body:not(.loaded) .section-logo {
 }
 
 #scroll-velocity-root {
-  width: 100vw !important;
-  max-width: 100vw !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+  width: 111.11% !important;
+  max-width: 111.11% !important;
+  margin-left: -5.556% !important;
+  margin-right: -5.556% !important;
+  left: 0 !important;
+  transform: none !important;
   position: relative !important;
   margin-top: 2.25rem !important;
   margin-bottom: 1rem !important;
+  overflow: hidden !important;
 }
 
 @media (max-width: 768px) {
@@ -3867,5 +3968,117 @@ body:not(.loaded) .section-logo {
   #scroll-velocity-root {
     margin-top: clamp(1.5rem, 4vh, 2rem) !important;
     margin-bottom: 0.5rem !important;
+  }
+
+  /* ===== MOBILE OVERRIDES FOR EXPERIENCE SECTION ===== */
+  section#experience {
+    padding: clamp(30px, 6vh, 60px) 5% clamp(20px, 4vh, 40px) !important;
+    min-height: 100dvh !important;
+    height: 100dvh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  body.transitions-enabled section#experience .bg {
+    padding: clamp(30px, 6vh, 60px) 5% clamp(20px, 4vh, 40px) !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  #experience .section-header {
+    margin-bottom: clamp(1rem, 3.5vh, 1.8rem) !important;
+    width: 100% !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  #experience .section-title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem) !important;
+    gap: 0.6rem !important;
+  }
+
+  #experience .section-title-badge {
+    font-size: 0.6rem !important;
+    padding: 0.2rem 0.6rem !important;
+  }
+
+  #experience .section-subtitle {
+    font-size: clamp(0.8rem, 2.2vw, 0.95rem) !important;
+    margin-top: 0.25rem !important;
+  }
+
+  #experience .grid-2 {
+    gap: clamp(0.75rem, 2.5vh, 1.25rem) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #experience .card {
+    padding: clamp(1rem, 3vw, 1.25rem) !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  #experience .card-header {
+    margin-bottom: 0.4rem !important;
+    gap: 0.5rem !important;
+  }
+
+  #experience .card-title {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem) !important;
+  }
+
+  #experience .chip {
+    font-size: clamp(0.6rem, 1.8vw, 0.65rem) !important;
+    padding: 0.15rem 0.5rem !important;
+  }
+
+  #experience .card-meta {
+    font-size: clamp(0.7rem, 2vw, 0.75rem) !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  #experience .card-body p {
+    font-size: clamp(0.78rem, 2.2vw, 0.85rem) !important;
+    line-height: 1.45 !important;
+  }
+
+  #experience .timeline {
+    gap: clamp(0.8rem, 2vh, 1.2rem) !important;
+  }
+
+  #experience .timeline-item {
+    padding-left: 1.1rem !important;
+    border-left-width: 1.5px !important;
+  }
+
+  #experience .timeline-item::before {
+    left: -5.25px !important;
+    width: 8px !important;
+    height: 8px !important;
+  }
+
+  #experience .timeline-title {
+    font-size: clamp(0.82rem, 2.3vw, 0.9rem) !important;
+    margin-bottom: 0.15rem !important;
+  }
+
+  #experience .timeline-meta {
+    font-size: clamp(0.68rem, 1.8vw, 0.72rem) !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  #experience .timeline-item p {
+    font-size: clamp(0.78rem, 2.2vw, 0.82rem) !important;
+    line-height: 1.45 !important;
+  }
+
+  #experience .grid-2 > div > div[style*="height"] {
+    height: clamp(0.75rem, 2.5vh, 1.25rem) !important;
   }
 }
