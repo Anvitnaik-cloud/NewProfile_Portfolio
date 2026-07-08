@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
   <script>
     // Immediately hide non-Willem content before page renders
     document.documentElement.style.overflow = 'hidden';
@@ -34,7 +34,7 @@
           <div class="willem-loader__box-inner">
             <div class="willem__growing-image">
               <div class="willem__growing-image-wrap">
-                <img class="willem__cover-image" src="assets/wavy bg.jpg" loading="lazy" alt="loading">
+                <img class="willem__cover-image" src="./assets/wavy bg.jpg" loading="lazy" alt="loading">
               </div>
             </div>
           </div>
@@ -326,7 +326,7 @@
 
           <article class="card project-card">
             <div class="project-card__img-wrapper">
-              <img src="assets/Chat.jpg" alt="Realtime Chat Application" class="project-card__img">
+              <img src="./assets/Chat.jpg" alt="Realtime Chat Application" class="project-card__img">
             </div>
             <div class="project-card__content">
               <div class="card-header">
@@ -355,7 +355,7 @@
 
           <article class="card project-card">
             <div class="project-card__img-wrapper">
-              <img src="assets/event.webp" alt="Event Scheduler" class="project-card__img">
+              <img src="./assets/event.webp" alt="Event Scheduler" class="project-card__img">
             </div>
             <div class="project-card__content">
               <div class="card-header">
@@ -384,7 +384,7 @@
 
           <article class="card project-card">
             <div class="project-card__img-wrapper">
-              <img src="assets/AI cover.jpg" alt="Multimodal Chatbot" class="project-card__img">
+              <img src="./assets/AI cover.jpg" alt="Multimodal Chatbot" class="project-card__img">
             </div>
             <div class="project-card__content">
               <div class="card-header">
@@ -683,7 +683,7 @@
           <div class="cert-wide-right">
             <p class="cert-wide-desc">Exposure to industry projects and workflows, bridging academic learning with
               real-world engineering practices.</p>
-            <img class="cert-logo cert-logo--wide" src="assets/shell.svg" alt="Shell" />
+            <img class="cert-logo cert-logo--wide" src="./assets/shell.svg" alt="Shell" />
           </div>
         </div>
 
@@ -1167,7 +1167,7 @@
   </script>
 
   <!-- Scroll Snap Drag Animation Script -->
-  <script src="./scroll-snap.js"></script>
+  <script src="./js/scroll-snap.js"></script>
 
   <!-- React and ScrollVelocity Component Integration -->
   <script type="module">
@@ -1344,8 +1344,250 @@
     }
   </script>
 
+  <!-- Certificates Carousel Infinite Loop Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.querySelector('.cert-grid');
+      if (!grid) return;
+
+      const originalCards = Array.from(grid.querySelectorAll('.cert-card'));
+      if (originalCards.length < 2) return;
+
+      const numOriginals = originalCards.length; // 6
+      const prependedCount = 2;
+
+      // Clone the last two cards and prepend them
+      const cloneLast1 = originalCards[numOriginals - 2].cloneNode(true);
+      const cloneLast2 = originalCards[numOriginals - 1].cloneNode(true);
+      cloneLast1.classList.add('clone');
+      cloneLast2.classList.add('clone');
+
+      // Clone the first two cards and append them
+      const cloneFirst1 = originalCards[0].cloneNode(true);
+      const cloneFirst2 = originalCards[1].cloneNode(true);
+      cloneFirst1.classList.add('clone');
+      cloneFirst2.classList.add('clone');
+
+      // Prepend before original[0]: results in [Card 4 clone, Card 5 clone] [original Cards 0-5]
+      grid.insertBefore(cloneLast2, originalCards[0]);
+      grid.insertBefore(cloneLast1, cloneLast2);
+
+      // Append clones at the end
+      grid.appendChild(cloneFirst1);
+      grid.appendChild(cloneFirst2);
+
+      let isMobile = window.innerWidth < 768;
+      let currentIndex = prependedCount; // Start at Card 0 original (index 2)
+      let autoplayTimer = null;
+      let autoplayResumeTimer = null;
+      let isTransitioning = false;
+
+      // Touch & Drag variables
+      let startX = 0;
+      let currentX = 0;
+      let isDragging = false;
+      let dragOffset = 0;
+
+      // Create dots dynamically
+      let dotsContainer = null;
+      let dots = [];
+
+      const createDots = () => {
+        if (dotsContainer) return;
+        dotsContainer = document.createElement('div');
+        dotsContainer.className = 'cert-carousel-dots';
+        
+        for (let i = 0; i < numOriginals; i++) {
+          const dot = document.createElement('span');
+          dot.className = 'dot';
+          if (i === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => {
+            if (isTransitioning) return;
+            stopAutoplay();
+            goToSlide(i + prependedCount);
+            resetAutoplayTimeout();
+          });
+          dotsContainer.appendChild(dot);
+          dots.push(dot);
+        }
+        
+        grid.parentNode.appendChild(dotsContainer);
+      };
+
+      const updateDots = () => {
+        if (dots.length === 0) return;
+        let activeIdx = (currentIndex - prependedCount) % numOriginals;
+        if (activeIdx < 0) activeIdx += numOriginals;
+        
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === activeIdx);
+        });
+      };
+
+      const getCardWidth = () => {
+        const card = grid.querySelector('.cert-card');
+        return card ? card.offsetWidth : 0;
+      };
+
+      const getSliderSettings = () => {
+        const viewportWidth = grid.parentElement.offsetWidth;
+        const cardWidth = getCardWidth();
+        const gap = 20; // 20px gap from CSS
+        const offsetPx = (viewportWidth - cardWidth) / 2;
+        const step = cardWidth + gap;
+        return { offsetPx, step };
+      };
+
+      const getSlidePositionPx = (index) => {
+        const { offsetPx, step } = getSliderSettings();
+        return offsetPx - index * step;
+      };
+
+      const setTrackPositionPx = (positionPx, animate = true) => {
+        if (animate) {
+          grid.style.transition = 'transform 0.8s ease-in-out';
+        } else {
+          grid.style.transition = 'none';
+        }
+        grid.style.transform = `translate3d(${positionPx}px, 0, 0)`;
+        if (!animate) {
+          // Force layout reflow to apply transition:none instantly
+          grid.offsetHeight;
+        }
+      };
+
+      const updateSlider = (animate = true) => {
+        const posPx = getSlidePositionPx(currentIndex);
+        setTrackPositionPx(posPx, animate);
+        updateDots();
+      };
+
+      const goToSlide = (index, animate = true) => {
+        if (isTransitioning && animate) return;
+        if (animate) isTransitioning = true;
+        currentIndex = index;
+        updateSlider(animate);
+      };
+
+      // Seamless boundary resetting on transitionend
+      grid.addEventListener('transitionend', () => {
+        isTransitioning = false;
+        if (currentIndex >= numOriginals + prependedCount) {
+          goToSlide(currentIndex - numOriginals, false);
+        } else if (currentIndex < prependedCount) {
+          goToSlide(currentIndex + numOriginals, false);
+        }
+      });
+
+      const nextSlide = () => {
+        if (isTransitioning) return;
+        goToSlide(currentIndex + 1);
+      };
+
+      const prevSlide = () => {
+        if (isTransitioning) return;
+        goToSlide(currentIndex - 1);
+      };
+
+      const startAutoplay = () => {
+        if (!isMobile) return;
+        stopAutoplay();
+        autoplayTimer = setInterval(nextSlide, 3500); // Autoplay interval 3.5s
+      };
+
+      const stopAutoplay = () => {
+        if (autoplayTimer) {
+          clearInterval(autoplayTimer);
+          autoplayTimer = null;
+        }
+      };
+
+      const resetAutoplayTimeout = () => {
+        clearTimeout(autoplayResumeTimer);
+        autoplayResumeTimer = setTimeout(() => {
+          startAutoplay();
+        }, 6000); // Resume autoplay after 6s of inactivity
+      };
+
+      // Touch events for drag gestures
+      const handleTouchStart = (e) => {
+        if (!isMobile || isTransitioning) return;
+        stopAutoplay();
+        clearTimeout(autoplayResumeTimer);
+        
+        isDragging = true;
+        startX = e.touches ? e.touches[0].clientX : e.clientX;
+        grid.style.transition = 'none';
+      };
+
+      const handleTouchMove = (e) => {
+        if (!isDragging) return;
+        currentX = e.touches ? e.touches[0].clientX : e.clientX;
+        dragOffset = currentX - startX;
+
+        // Apply dragOffset to current position
+        const currentBasePosPx = getSlidePositionPx(currentIndex);
+        grid.style.transform = `translate3d(${currentBasePosPx + dragOffset}px, 0, 0)`;
+      };
+
+      const handleTouchEnd = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        // Swipe threshold: 50px
+        if (dragOffset < -50) {
+          nextSlide();
+        } else if (dragOffset > 50) {
+          prevSlide();
+        } else {
+          // Snap back
+          goToSlide(currentIndex);
+        }
+        
+        dragOffset = 0;
+        resetAutoplayTimeout();
+      };
+
+      // Attach touch listeners to grid
+      grid.addEventListener('touchstart', handleTouchStart, { passive: true });
+      grid.addEventListener('touchmove', handleTouchMove, { passive: true });
+      grid.addEventListener('touchend', handleTouchEnd);
+
+      // Mouse drag support for testing/desktop simulators
+      grid.addEventListener('mousedown', handleTouchStart);
+      window.addEventListener('mousemove', handleTouchMove);
+      window.addEventListener('mouseup', handleTouchEnd);
+
+      const init = () => {
+        isMobile = window.innerWidth < 768;
+        if (isMobile) {
+          createDots();
+          goToSlide(prependedCount, false);
+          startAutoplay();
+        } else {
+          // Reset styles if resized back to desktop
+          grid.style.transform = 'none';
+          grid.style.transition = 'none';
+          stopAutoplay();
+          clearTimeout(autoplayResumeTimer);
+          if (dotsContainer) {
+            dotsContainer.remove();
+            dotsContainer = null;
+            dots = [];
+          }
+        }
+      };
+
+      // Run init on load
+      init();
+
+      // Run on resize
+      window.addEventListener('resize', init);
+    });
+  </script>
+
   <!-- GSAP Hamburger Menu Animation -->
-  <script src="./hamburger-menu.js"></script>
+  <script src="./js/hamburger-menu.js"></script>
 </body>
 
 </html>

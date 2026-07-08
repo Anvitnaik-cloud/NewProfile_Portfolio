@@ -1419,20 +1419,72 @@ body.transitions-enabled #education .bg {
 
 /* Mobile Layout (< 768px) */
 @media (max-width: 767px) {
-  .cert-split-container {
-    flex-direction: column;
-    gap: 2rem;
-    align-items: stretch;
-  }
-
-  .cert-image-column {
-    flex: 0 0 100%;
-    width: 100%;
+  section#certifications {
+    padding: clamp(30px, 5vh, 45px) 5% clamp(20px, 4vh, 35px) !important;
+    min-height: 100dvh !important;
+    height: 100dvh !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  body.transitions-enabled section#certifications .bg {
+    padding: clamp(30px, 5vh, 45px) 5% clamp(20px, 4vh, 35px) !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  #certifications .section-header {
+    margin-bottom: clamp(1rem, 3.5vh, 1.8rem) !important;
+    width: 100% !important;
+    text-align: center !important;
     align-items: center !important;
-    margin-bottom: 1.5rem !important;
+  }
+
+  #certifications .section-title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem) !important;
+    gap: 0.6rem !important;
+    text-align: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  #certifications .title-line-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+  }
+
+  #certifications .section-title-badge {
+    font-size: 0.6rem !important;
+    padding: 0.2rem 0.6rem !important;
+    margin-top: 0.2rem !important;
+  }
+
+  #certifications .section-subtitle {
+    font-size: clamp(0.8rem, 2.2vw, 0.95rem) !important;
+    margin-top: 0.25rem !important;
+    text-align: center !important;
+    line-height: 1.45 !important;
+    max-width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .cert-split-container {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    align-items: stretch !important;
+  }
+
+  .cert-image-column {
+    display: none !important;
   }
 
   .cert-content-wrapper {
@@ -1440,20 +1492,110 @@ body.transitions-enabled #education .bg {
   }
 
   .cert-content-column {
-    flex: 0 0 100%;
-    width: 100%;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
     transform: translateY(0) !important;
+    overflow: hidden !important;
+    position: relative !important;
   }
 
-  .cert-statue-img {
-    margin-left: 0 !important;
-    margin-bottom: 0 !important;
-    max-width: 220px !important;
-    transform: none !important;
+  .cert-wide-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    padding: 1rem 1.2rem !important;
+    margin-bottom: clamp(1rem, 3vh, 1.5rem) !important;
+    height: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .cert-wide-left {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+  }
+
+  .cert-wide-right {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 1rem !important;
+  }
+
+  .cert-wide-desc {
+    font-size: clamp(0.75rem, 2.2vw, 0.85rem) !important;
+    line-height: 1.4 !important;
+  }
+
+  .cert-logo--wide {
+    width: 28px !important;
+    height: 28px !important;
   }
 
   .cert-content-column .cert-grid {
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0.5rem 0 1rem 0 !important;
+    overflow-x: visible !important;
+    touch-action: pan-y !important;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+  }
+
+  .cert-content-column .cert-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .cert-content-column .cert-grid .cert-card {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 155px !important;
+    box-sizing: border-box !important;
+    margin-right: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 1.1rem 1.2rem !important;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  .cert-card.clone {
+    display: flex !important;
+  }
+
+  .cert-carousel-dots {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .cert-carousel-dots .dot {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  }
+
+  .cert-carousel-dots .dot.active {
+    width: 24px !important;
+    border-radius: 4px !important;
+    background: #ffffff !important;
   }
 }
 
@@ -1477,6 +1619,10 @@ body.transitions-enabled #education .bg {
   -webkit-backdrop-filter: blur(12px);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   position: relative;
+}
+
+.cert-card.clone {
+  display: none !important;
 }
 
 .cert-card:hover {
@@ -3716,7 +3862,7 @@ body.transitions-enabled .section-header {
 
 /* Section Specific Dot Accent Colors */
 .logo-hero .nav-logo-dot {
-  color: #050816 !important;
+  color: #eab308 !important;
 }
 
 .logo-about .nav-logo-dot {
@@ -3724,7 +3870,7 @@ body.transitions-enabled .section-header {
 }
 
 .logo-skills .nav-logo-dot {
-  color: #E05C35 !important;
+  color: #eab308 !important;
 }
 
 .logo-projects .nav-logo-dot {
@@ -3740,7 +3886,7 @@ body.transitions-enabled .section-header {
 }
 
 .logo-certifications .nav-logo-dot {
-  color: #ffffff !important;
+  color: #eab308 !important;
 }
 
 .logo-links .nav-logo-dot {
@@ -3996,6 +4142,8 @@ body:not(.loaded) .section-logo {
     width: 100% !important;
     text-align: center !important;
     align-items: center !important;
+    position: relative !important;
+    top: 10px !important;
   }
 
   #experience .section-title {
@@ -4017,6 +4165,8 @@ body:not(.loaded) .section-logo {
     gap: clamp(0.75rem, 2.5vh, 1.25rem) !important;
     width: 100% !important;
     max-width: 100% !important;
+    position: relative !important;
+    top: 5px !important;
   }
 
   #experience .card {
