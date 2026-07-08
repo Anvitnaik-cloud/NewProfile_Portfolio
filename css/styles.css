@@ -121,7 +121,7 @@ body.scroll-dragging main section {
 }
 
 .hero-title {
-  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  font-family: "Google Sans", "Product Sans", "Space Grotesk", "IBM Plex Sans", sans-serif;
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -488,7 +488,7 @@ section#education>* {
 
 .section-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 2rem;
   margin-bottom: 3rem;
@@ -502,9 +502,26 @@ section#education>* {
   line-height: 1.1;
   text-transform: uppercase;
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
   flex-shrink: 0;
+}
+
+.title-line-container {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+.title-line {
+  display: inline-block !important;
+}
+
+.section-title .section-title-badge {
+  display: inline-block !important;
+  margin: 0 !important;
+  vertical-align: middle !important;
 }
 
 section#projects .section-title {
@@ -2884,6 +2901,7 @@ main:has(.willem-header.is--loading) {
   min-width: 1em;
   height: 100%;
   position: absolute;
+  background: #050816;
 }
 
 .willem__cover-image {
