@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Anvit Naik | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Portfolio of Anvit Naik, Computer Science & Engineering student and ACM Executive Committee Member specializing in full-stack development, Python, and GenAI."
-  />
+  <meta name="description"
+    content="Portfolio of Anvit Naik, Computer Science & Engineering student and ACM Executive Committee Member specializing in full-stack development, Python, and GenAI." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="./styles.css" />
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
   <script>
     // Immediately hide non-Willem content before page renders
     document.documentElement.style.overflow = 'hidden';
@@ -36,7 +34,7 @@
           <div class="willem-loader__box-inner">
             <div class="willem__growing-image">
               <div class="willem__growing-image-wrap">
-                <img class="willem__cover-image" src="assets/wavy bg.jpg" loading="lazy" alt="loading">
+                <img class="willem__cover-image" src="./assets/wavy bg.jpg" loading="lazy" alt="loading">
               </div>
             </div>
           </div>
@@ -51,44 +49,60 @@
     </div>
   </section>
 
-  <!-- Navigation -->
-  <header class="nav">
-    <div class="nav-inner">
-      <a href="#top" class="nav-brand">
-        <div class="nav-avatar">AN</div>
-        <div>
 
-          <div style="font-size: 0.7rem; color: var(--muted);">
-         Computer Science and Engineering | FullStack Developer |
-            <br>
-            AI Enthusiast
-          </div>
-        </div>
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+  <!-- Hamburger Menu Button (always visible, top-right fixed) -->
+  <div id="hamburger-menu" class="hamburger-menu" aria-label="Toggle menu" role="button" tabindex="0">
+    <span id="top-line" class="hamburger-menu__line"></span>
+    <span id="bottom-line" class="hamburger-menu__line"></span>
+  </div>
+
+  <!-- Fullscreen Navigation Overlay -->
+  <nav id="nav-overlay" class="nav-overlay" aria-hidden="true">
+    <div id="links-section" class="nav-overlay__links">
+      <a href="#about" class="nav-overlay__link" data-menu-link>About</a>
+      <a href="#skills" class="nav-overlay__link" data-menu-link>Skills</a>
+      <a href="#projects" class="nav-overlay__link" data-menu-link>Projects</a>
+      <a href="#experience" class="nav-overlay__link" data-menu-link>Experience</a>
+      <a href="#education" class="nav-overlay__link" data-menu-link>Education</a>
+      <a href="#certifications" class="nav-overlay__link" data-menu-link>Certifications</a>
+      <a href="#contact" class="nav-overlay__link" data-menu-link>Contact</a>
     </div>
-  </header>
+
+    <div id="contacts-section" class="nav-overlay__contacts">
+      <div class="nav-overlay__contact-block">
+        <p class="nav-overlay__contact-label">Email</p>
+        <a href="mailto:anvitnaik470@gmail.com" class="nav-overlay__contact-value">anvitnaik470@gmail.com</a>
+      </div>
+      <div class="nav-overlay__contact-block">
+        <p class="nav-overlay__contact-label">Socials</p>
+        <div class="nav-overlay__socials">
+          <a href="https://www.linkedin.com/in/anvitnaik" target="_blank" rel="noopener noreferrer"
+            class="nav-overlay__social-link nav-overlay__social-link--linkedin">LinkedIn</a>
+          <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+            class="nav-overlay__social-link nav-overlay__social-link--github">GitHub</a>
+          <a href="https://www.hackerrank.com/profile/anvitnaik470" target="_blank" rel="noopener noreferrer"
+            class="nav-overlay__social-link nav-overlay__social-link--hackerrank">HackerRank</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <main id="top" class="wrapper">
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-heading">
+      <a href="#top" class="section-logo logo-hero">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="hero-grid">
-        <div>
+        <div class="hero-left">
           <div class="hero-pill fade-in-down">
             <span>Open For Internships </span>
           </div> <br>
 
-          <h1 id="hero-heading" class="hero-title fade-in-up">
-             I'm <span>Anvit Naik</span>
-          </h1>
+          <h3 id="hero-heading" class="hero-title fade-in-up">
+            I'm Anvit Naik
+          </h3>
           <p class="hero-subtitle fade-in-up">
             A motivated Computer Science and Engineering student with a strong
             foundation in full-stack development, Python, and modern AI tools.
@@ -99,7 +113,6 @@
           <div class="hero-tags fade-in-up">
             <span class="tag">ACM Executive Committee Member</span>
             <span class="tag tag--soft">B.E | B.Tech batch of 2023</span>
-            <span class="tag tag--soft">Bengaluru, Karnataka</span>
           </div>
 
           <div class="hero-actions fade-in-up">
@@ -112,28 +125,28 @@
           </div>
         </div>
 
-       <div class="hero-right slide-in-right">
-  <div class="hero-card" aria-label="Profile photo">
-    <div class="hero-profile">
-      <div class="hero-profile-ring">
-        <div class="hero-profile-img">
-          <img
-            src="./assets/hero-portrait.jpg"
-            alt="Anvit Naik"
-          />
-        </div>
-      </div>
-    
-    </div>
+        <div class="hero-right slide-in-right">
+          <div class="hero-card" aria-label="Profile photo">
+            <div class="hero-profile">
+              <div class="hero-profile-ring">
+                <div class="hero-profile-img">
+                  <img src="./assets/hero-portrait.jpg" alt="Anvit Naik" />
+                </div>
+              </div>
 
-    <div class="hero-orbit" aria-hidden="true"></div>
-  </div>
-</div>
+            </div>
+
+            <div class="hero-orbit" aria-hidden="true"></div>
+          </div>
+        </div>
 
     </section>
 
     <!-- About -->
     <section id="about" aria-labelledby="about-heading">
+      <a href="#top" class="section-logo logo-about">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header fade-in-up">
         <h2 class="section-title">
           About
@@ -159,12 +172,18 @@
           volunteer at college events. I’m currently seeking internship
           opportunities where I can contribute, learn from real-world projects,
           and grow as a full-stack and AI-driven developer.
-        </p>
       </article>
+
+      <!-- ScrollVelocity React Root -->
+      <div id="scroll-velocity-root" class="fade-in-up"></div>
     </section>
 
     <!-- Skills -->
     <section id="skills" aria-labelledby="skills-heading">
+      <a href="#top" class="section-logo logo-skills">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
+      <div class="deco-letter">a.</div>
       <div class="section-header fade-in-up">
         <h2 class="section-title">
           Skills
@@ -198,7 +217,7 @@
         </div>
 
         <div class="card">
-          <div class="card-title">Back-End &amp; Databases</div>
+          <div class="card-title">Back-End Databases</div>
           <div class="skill-chip-row">
             <span class="skill-chip">Node.js</span>
             <span class="skill-chip">Socket.IO</span>
@@ -216,18 +235,18 @@
             <span class="skill-chip">Eclipse</span>
             <span class="skill-chip">Canva</span>
             <span class="skill-chip">Ubuntu</span>
-            
+
           </div>
         </div>
 
         <div class="card">
-          <div class="card-title">AI &amp; Data</div>
+          <div class="card-title">AI and Data</div>
           <div class="skill-chip-row">
             <span class="skill-chip">GenAI • LLMs</span>
             <span class="skill-chip">Vertex AI</span>
             <span class="skill-chip">RAG</span>
             <span class="skill-chip">Prompting </span>
-            <span class="skill-chip">Data Analytics</span> 
+            <span class="skill-chip">Data Analytics</span>
           </div>
         </div>
 
@@ -245,124 +264,286 @@
 
     <!-- Projects -->
     <section id="projects" aria-labelledby="projects-heading">
+      <a href="#top" class="section-logo logo-projects">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header fade-in-up">
-        <h2 class="section-title">
-          Projects
-          <span class="section-title-badge">Selected Work</span>
-        </h2>
-        <p class="section-subtitle">
-          A few projects that reflect my interest in web development, Python
-          applications, real-time systems, and AI-powered interactions.
-        </p>
+        <div class="section-header-left">
+          <h2 class="section-title">
+            Projects
+            <span class="section-title-badge">Selected Work</span>
+          </h2>
+          <p class="section-subtitle">
+            A few projects that reflect my interest in web development, Python
+            applications, real-time systems, and AI-powered interactions.
+          </p>
+        </div>
+        <div class="carousel-nav-buttons">
+          <button class="carousel-nav-btn prev-btn" aria-label="Previous Project">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <button class="carousel-nav-btn next-btn" aria-label="Next Project">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
       </div>
-
-      <div class="project-grid fade-in-up">
-        <article class="card project-card fade-in-up">
-          <img src="./assets/Travel.webp" alt="Travel Explorer" class="project-card__img">
-          <div class="project-card__content">
-            <div class="card-header">
-              <h3 class="card-title">Travel Explorer</h3>
-              <span class="chip">Front-End</span>
+      <div class="projects-carousel-container fade-in-up">
+        <div class="projects-carousel-track">
+          <article class="card project-card">
+            <div class="project-card__img-wrapper">
+              <img src="./assets/Travel.webp" alt="Travel Explorer" class="project-card__img">
             </div>
-            <div class="card-meta">HTML • CSS • JavaScript</div>
-            <div class="card-body">
-              <p>Interactive web app for exploring travel destinations with a responsive, engaging UI.</p>
-            </div>
-            <div class="project-card__footer">
+            <div class="project-card__content">
+              <div class="card-header">
+                <h3 class="card-title">Travel Explorer</h3>
+                <span class="chip">Front-End</span>
+              </div>
+              <div class="card-meta">HTML • CSS • JavaScript</div>
+              <div class="card-body">
+                <p>Interactive web app for exploring travel destinations with a responsive, engaging UI.</p>
+              </div>
               <div class="card-tags">
                 <span class="card-tag">Responsive Design</span>
                 <span class="card-tag">UX</span>
               </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
-              </a>
+              <div class="project-card__footer">
+                <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                  class="project-github-link" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="card project-card fade-in-up">
-          <img src="assets/event.webp" alt="Event Scheduler" class="project-card__img">
-          <div class="project-card__content">
-            <div class="card-header">
-              <h3 class="card-title">Event Scheduler</h3>
-              <span class="chip">Python</span>
+          <article class="card project-card">
+            <div class="project-card__img-wrapper">
+              <img src="./assets/Chat.jpg" alt="Realtime Chat Application" class="project-card__img">
             </div>
-            <div class="card-meta">Python</div>
-            <div class="card-body">
-              <p>Python app for managing events and schedules with streamlined admin workflows.</p>
+            <div class="project-card__content">
+              <div class="card-header">
+                <h3 class="card-title">Realtime Chat App</h3>
+                <span class="chip">Full-Stack</span>
+              </div>
+              <div class="card-meta">Node.js • Socket.IO</div>
+              <div class="card-body">
+                <p>Real-time chat with auth, private/group messaging, typing indicators, and delivery status.</p>
+              </div>
+              <div class="card-tags">
+                <span class="card-tag">Socket.IO</span>
+                <span class="card-tag">Node.js</span>
+              </div>
+              <div class="project-card__footer">
+                <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                  class="project-github-link" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                  </svg>
+                </a>
+              </div>
             </div>
-            <div class="project-card__footer">
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card__img-wrapper">
+              <img src="./assets/event.webp" alt="Event Scheduler" class="project-card__img">
+            </div>
+            <div class="project-card__content">
+              <div class="card-header">
+                <h3 class="card-title">Event Scheduler</h3>
+                <span class="chip">Python</span>
+              </div>
+              <div class="card-meta">Python</div>
+              <div class="card-body">
+                <p>Python app for managing events and schedules with streamlined admin workflows.</p>
+              </div>
               <div class="card-tags">
                 <span class="card-tag">Python</span>
                 <span class="card-tag">CLI / GUI</span>
               </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
-              </a>
+              <div class="project-card__footer">
+                <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                  class="project-github-link" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="card project-card fade-in-up">
-          <img src="assets/AI cover.jpg" alt="Multimodal Chatbot" class="project-card__img">
-          <div class="project-card__content">
-            <div class="card-header">
-              <h3 class="card-title">Multimodal Chatbot</h3>
-              <span class="chip">AI • GenAI</span>
+          <article class="card project-card">
+            <div class="project-card__img-wrapper">
+              <img src="./assets/AI cover.jpg" alt="Multimodal Chatbot" class="project-card__img">
             </div>
-            <div class="card-meta">Python • Streamlit • MongoDB Atlas</div>
-            <div class="card-body">
-              <p>AI chatbot processing text and visual inputs with LLMs, persistent storage, and Streamlit UI.</p>
-            </div>
-            <div class="project-card__footer">
+            <div class="project-card__content">
+              <div class="card-header">
+                <h3 class="card-title">Multimodal Chatbot</h3>
+                <span class="chip">AI • GenAI</span>
+              </div>
+              <div class="card-meta">Python • Streamlit • MongoDB Atlas</div>
+              <div class="card-body">
+                <p>AI chatbot processing text and visual inputs with LLMs, persistent storage, and Streamlit UI.</p>
+              </div>
               <div class="card-tags">
                 <span class="card-tag">LLMs</span>
                 <span class="card-tag">RAG</span>
                 <span class="card-tag">Streamlit</span>
               </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card project-card fade-in-up">
-          <img src="assets/Chat.jpg" alt="Realtime Chat Application" class="project-card__img">
-          <div class="project-card__content">
-            <div class="card-header">
-              <h3 class="card-title">Realtime Chat App</h3>
-              <span class="chip">Full-Stack</span>
-            </div>
-            <div class="card-meta">Node.js • Socket.IO</div>
-            <div class="card-body">
-              <p>Real-time chat with auth, private/group messaging, typing indicators, and delivery status.</p>
-            </div>
-            <div class="project-card__footer">
-              <div class="card-tags">
-                <span class="card-tag">Realtime</span>
-                <span class="card-tag">Socket.IO</span>
-                <span class="card-tag">Node.js</span>
+              <div class="project-card__footer">
+                <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                  class="project-github-link" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                  </svg>
+                </a>
               </div>
-              <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
-              </a>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
+
+      <div class="carousel-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+      </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const track = document.querySelector('.projects-carousel-track');
+          const cards = document.querySelectorAll('.projects-carousel-track .project-card');
+          const dots = document.querySelectorAll('.carousel-dots .dot');
+          const prevBtn = document.querySelector('.carousel-nav-btn.prev-btn');
+          const nextBtn = document.querySelector('.carousel-nav-btn.next-btn');
+
+          if (!track || cards.length === 0) return;
+
+          let currentIndex = 0;
+
+          const getVisibleCardsCount = () => {
+            const style = window.getComputedStyle(track);
+            const paddingLeft = parseFloat(style.paddingLeft || 0);
+            const trackWidth = track.getBoundingClientRect().width - paddingLeft;
+            const cardWidth = cards[0].getBoundingClientRect().width;
+            const gap = parseFloat(style.gap || 0);
+            return Math.max(1, Math.round((trackWidth + gap) / (cardWidth + gap)));
+          };
+
+          const getMaxIndex = () => {
+            return Math.max(0, cards.length - getVisibleCardsCount());
+          };
+
+          const updateCarousel = () => {
+            const maxIndex = getMaxIndex();
+
+            if (currentIndex > maxIndex) {
+              currentIndex = maxIndex;
+            }
+
+            dots.forEach((dot, idx) => {
+              if (idx > maxIndex) {
+                dot.style.display = 'none';
+              } else {
+                dot.style.display = 'inline-block';
+              }
+              dot.classList.toggle('active', idx === currentIndex);
+            });
+
+            if (prevBtn) prevBtn.disabled = currentIndex === 0;
+            if (nextBtn) nextBtn.disabled = currentIndex >= maxIndex;
+          };
+
+          const scrollToCard = (index) => {
+            const maxIndex = getMaxIndex();
+            let targetIndex = Math.min(Math.max(0, index), maxIndex);
+            currentIndex = targetIndex;
+
+            const cardWidth = cards[0].getBoundingClientRect().width;
+            const gap = parseFloat(window.getComputedStyle(track).gap || 0);
+            const targetScrollLeft = currentIndex * (cardWidth + gap);
+
+            track.scrollTo({
+              left: targetScrollLeft,
+              behavior: 'smooth'
+            });
+            updateCarousel();
+          };
+
+          // Scroll listener to update dots when user swipes on touch/trackpad devices
+          let scrollTimeout;
+          track.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+              const cardWidth = cards[0].getBoundingClientRect().width;
+              const gap = parseFloat(window.getComputedStyle(track).gap || 0);
+              const scrollLeft = track.scrollLeft;
+
+              const newIndex = Math.round(scrollLeft / (cardWidth + gap));
+              const maxIndex = getMaxIndex();
+              const targetIndex = Math.min(newIndex, maxIndex);
+
+              if (targetIndex >= 0 && targetIndex !== currentIndex) {
+                currentIndex = targetIndex;
+                updateCarousel();
+              }
+            }, 50);
+          });
+
+          if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+              if (currentIndex > 0) {
+                scrollToCard(currentIndex - 1);
+              }
+            });
+          }
+
+          if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+              if (currentIndex < getMaxIndex()) {
+                scrollToCard(currentIndex + 1);
+              }
+            });
+          }
+
+          dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+              scrollToCard(idx);
+            });
+          });
+
+          window.addEventListener('resize', updateCarousel);
+
+          updateCarousel();
+        });
+      </script>
     </section>
 
     <!-- Experience & Activities -->
     <section id="experience" aria-labelledby="experience-heading">
+      <a href="#top" class="section-logo logo-experience">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header fade-in-up">
         <h2 class="section-title">
           Experience
           <span class="section-title-badge">Leadership &amp; Involvement</span>
         </h2>
         <p class="section-subtitle">
-          Roles, hackathons, and volunteering that have helped me grow beyond
-          the classroom.
+          Key roles, hackathons, and activities beyond the classroom.
         </p>
       </div>
 
@@ -374,19 +555,11 @@
               <span class="chip">ACM Student Chapter</span>
             </div>
             <div class="card-meta">
-              Association for Computing Machinery • Apr 2025 – Present •
-              Bengaluru, Karnataka
+              Association for Computing Machinery • Apr 2025 – Present
             </div>
             <div class="card-body">
               <p>
-                Contributing to the ACM student chapter by helping organize
-                events, workshops, and technical sessions that engage and
-                support fellow students.
-              </p>
-              <p>
-                This role has strengthened my leadership, teamwork, and
-                communication skills while keeping me close to cutting-edge
-                computing topics.
+                Organize workshops, events, and technical sessions to support student engagement. Develop leadership and teamwork skills by coordinating on-campus computing initiatives.
               </p>
             </div>
           </div>
@@ -398,17 +571,10 @@
               <h3 class="card-title">SAP HackFest</h3>
               <span class="chip">Hackathon</span>
             </div>
-            <div class="card-meta">State Hub Round Qualifier</div>
+            <div class="card-meta">State Hub Round Qualifier • 2025</div>
             <div class="card-body">
               <p>
-                Participated in SAP HackFest on the theme of Sustainable
-                Business. Our team qualified for the State Hub Round, where we
-                ideated and prototyped impactful solutions around
-                sustainability.
-              </p>
-              <p>
-                The experience improved my rapid prototyping, collaboration,
-                and problem-solving under time constraints.
+                Qualified for the State Hub Round on the theme of Sustainable Business. Ideated and built functional prototypes under time constraints.
               </p>
             </div>
           </div>
@@ -426,21 +592,17 @@
                   25th Annual VTU Fest Volunteer
                 </div>
                 <div class="timeline-meta">
-                  Global Academy of Technology
+                  Global Academy of Technology • 2025
                 </div>
                 <p>
-                  Assisted in organizing the 25th VTU fest, contributing to
-                  planning and execution of events. This strengthened my
-                  organizational, coordination, and team-oriented skills.
+                  Assisted in planning and executing events, sharpening coordination and event management skills.
                 </p>
               </div>
               <div class="timeline-item">
                 <div class="timeline-title">Community &amp; Peer Learning</div>
                 <div class="timeline-meta">On-campus &amp; online</div>
                 <p>
-                  Participating in online courses, coding platforms, and peer
-                  discussions to continuously upgrade my skills and stay
-                  updated with new technologies.
+                  Engage in online courses, coding challenges, and study groups to continuously upskill in emerging tech.
                 </p>
               </div>
             </div>
@@ -451,6 +613,10 @@
 
     <!-- Education -->
     <section id="education" aria-labelledby="education-heading">
+      <a href="#top" class="section-logo logo-education">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
+      <div class="deco-letter">a.</div>
       <div class="section-header fade-in-up">
         <h2 class="section-title">
           Education
@@ -475,7 +641,7 @@
           </div>
         </article>
 
-    
+
 
         <article class="card">
           <div class="card-title">10th Standard</div>
@@ -490,93 +656,144 @@
 
     <!-- Certifications & Training -->
     <section id="certifications" aria-labelledby="certifications-heading">
-      <div class="section-header fade-in-up">
-        <h2 class="section-title">
-          Certifications
-          <span class="section-title-badge">Learning</span>
-        </h2>
-        <p class="section-subtitle">
-          Certifications and training programs that reflect my interest in
-          full-stack development, clean code, data analytics, and GenAI.
-        </p>
-      </div>
-
-      <div class="cert-grid fade-in-up">
-        <div class="cert-card fade-in-up">
-          <span class="cert-year">2024</span>
-          <h3 class="cert-name">Python Clean Code</h3>
-          <p class="cert-desc">Infosys Springboard</p>
-          <a href="file:///C:/Users/Anvit/Downloads/1-18d1e4c6-348c-4f5c-a19c-ea0876c38523%20(1).pdf" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
+      <a href="#top" class="section-logo logo-certifications">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
+      <div class="cert-content-wrapper">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title certifications-title">
+            <span class="title-line">The Museum of</span>
+            <span class="title-line-container">
+              <span class="title-line">Certifications</span>
+              <span class="section-title-badge">Learning</span>
+            </span>
+          </h2>
+          <p class="section-subtitle">
+            Certifications and training programs that reflect my interest in
+            full-stack development, clean code, data analytics, and GenAI.
+          </p>
         </div>
 
-        <div class="cert-card fade-in-up">
-          <span class="cert-year">2024</span>
-          <h3 class="cert-name">Full Stack Development</h3>
-          <p class="cert-desc">Infosys Springboard</p>
-          <a href="https://infyspringboard.onwingspan.com/web/en/app/profile/competency/certificate" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
-        </div>
-
-        <div class="cert-card fade-in-up">
-          <span class="cert-year">2025</span>
-          <h3 class="cert-name">Gen AI Exchange Program</h3>
-          <p class="cert-desc">Google Cloud</p>
-          <a href="https://www.linkedin.com/posts/anvitnaik_ai-machinelearning-careergrowth-share-7333459786677530625-k8JU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcyg1gBz0aeCD_5saayXQOR8WSALKcZyAM" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
-        </div>
-
-        <div class="cert-card fade-in-up">
-          <span class="cert-year">2025</span>
-          <h3 class="cert-name">AI Foundations</h3>
-          <p class="cert-desc">Oracle University</p>
-          <a href="https://www.linkedin.com/posts/anvitnaik_oracle-cloud-infrastructure-2025-certified-share-7363613916330938368-kJx2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcyg1gBz0aeCD_5saayXQOR8WSALKcZyAM" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
-        </div>
-
-        <div class="cert-card fade-in-up">
-          <span class="cert-year">2026</span>
-          <h3 class="cert-name">Google Cloud Engineer</h3>
-          <p class="cert-desc">Google Career Launchpad</p>
-          <a href="https://www.credly.com/badges/02e2b6a8-bf51-442d-a644-6aa9b8b7e399/public_url" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
-        </div>
-
-        <div class="cert-card fade-in-up">
-          <span class="cert-year">2025</span>
-          <h3 class="cert-name">Data Analytics</h3>
-          <p class="cert-desc">Forage – Deloitte Australia</p>
-          <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_KhuvhkvrbLxhhDxxq_1750613462614_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Virtual Internship - Wide Card -->
-      <div class="cert-wide fade-in-up">
-        <div class="cert-wide-card">
+        <!-- Virtual Internship - Wide Card inside grid -->
+        <div class="cert-wide-card fade-in-up">
           <div class="cert-wide-left">
             <span class="cert-year">2025</span>
             <h3 class="cert-wide-title">Virtual Internship – Edunet (with Shell)</h3>
           </div>
           <div class="cert-wide-right">
-            <p class="cert-wide-desc">Exposure to industry projects and workflows, bridging academic learning with real-world engineering practices.</p>
-            <img class="cert-logo cert-logo--wide" src="assets/shell.svg" alt="Shell" />
+            <p class="cert-wide-desc">Exposure to industry projects and workflows, bridging academic learning with
+              real-world engineering practices.</p>
+            <img class="cert-logo cert-logo--wide" src="./assets/shell.svg" alt="Shell" />
+          </div>
+        </div>
+
+        <div class="cert-split-container fade-in-up">
+          <!-- Left Column: Image (50% on desktop) -->
+          <div class="cert-image-column">
+            <!-- Future Certificate Illustration/Image goes here -->
+            <img src="./assets/greek-statue.png" alt="Greek Statue" class="cert-statue-img" />
+          </div>
+
+          <!-- Right Column: Certificate Cards (60%) -->
+          <div class="cert-content-column">
+            <div class="cert-grid">
+              <div class="cert-card fade-in-up">
+                <span class="cert-year">2024</span>
+                <h3 class="cert-name">Python Clean Code</h3>
+                <p class="cert-desc">Infosys Springboard</p>
+                <a href="file:///C:/Users/Anvit/Downloads/1-18d1e4c6-348c-4f5c-a19c-ea0876c38523%20(1).pdf" target="_blank"
+                  rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="cert-card fade-in-up">
+                <span class="cert-year">2024</span>
+                <h3 class="cert-name">Full Stack Development</h3>
+                <p class="cert-desc">Infosys Springboard</p>
+                <a href="https://infyspringboard.onwingspan.com/web/en/app/profile/competency/certificate" target="_blank"
+                  rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="cert-card fade-in-up">
+                <span class="cert-year">2025</span>
+                <h3 class="cert-name">Gen AI Exchange Program</h3>
+                <p class="cert-desc">Google Cloud</p>
+                <a href="https://www.linkedin.com/posts/anvitnaik_ai-machinelearning-careergrowth-share-7333459786677530625-k8JU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcyg1gBz0aeCD_5saayXQOR8WSALKcZyAM"
+                  target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="cert-card fade-in-up">
+                <span class="cert-year">2025</span>
+                <h3 class="cert-name">AI Foundations</h3>
+                <p class="cert-desc">Oracle University</p>
+                <a href="https://www.linkedin.com/posts/anvitnaik_oracle-cloud-infrastructure-2025-certified-share-7363613916330938368-kJx2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEcyg1gBz0aeCD_5saayXQOR8WSALKcZyAM"
+                  target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="cert-card fade-in-up">
+                <span class="cert-year">2026</span>
+                <h3 class="cert-name">Google Cloud Engineer</h3>
+                <p class="cert-desc">Google Career Launchpad</p>
+                <a href="https://www.credly.com/badges/02e2b6a8-bf51-442d-a644-6aa9b8b7e399/public_url" target="_blank"
+                  rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="cert-card fade-in-up">
+                <span class="cert-year">2025</span>
+                <h3 class="cert-name">Data Analytics</h3>
+                <p class="cert-desc">Forage – Deloitte Australia</p>
+                <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_KhuvhkvrbLxhhDxxq_1750613462614_completion_certificate.pdf"
+                  target="_blank" rel="noopener noreferrer" class="cert-verify" aria-label="Verify credential">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Links & Profiles -->
-    <section aria-labelledby="links-heading">
+    <section id="links" aria-labelledby="links-heading">
+      <a href="#top" class="section-logo logo-links">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header">
         <h2 class="section-title">
-          Links &amp; Profiles
+          Links and Profiles
           <span class="section-title-badge">Online</span>
         </h2>
         <p class="section-subtitle">
@@ -584,65 +801,147 @@
         </p>
       </div>
 
-      <div class="links-grid">
-        <a
-          class="link-card"
-          href="https://my-portfolio-red-phi-60.vercel.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div>
-            <span class="link-label">Live Portfolio</span>
-            <span class="link-sub">my-portfolio-red-phi-60.vercel.app</span>
+      <div class="floating-links-container">
+        <!-- Card 01: Live Portfolio -->
+        <a class="floating-link-card float-card-1" href="https://my-portfolio-red-phi-60.vercel.app/" target="_blank"
+          rel="noreferrer">
+          <div class="float-card-glow"></div>
+          <div class="float-card-header">
+            <span class="float-card-num">01</span>
+            <span class="float-card-icon">🌐</span>
           </div>
-            <span class="link-icon" aria-hidden="true">
-              <svg class="link-triangle" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18" style="margin-left:6px; fill:#ffffff;"><polygon points="12,17 6,9 18,9"/></svg>
+          <div class="float-card-body">
+            <h3 class="float-card-title">Live Portfolio</h3>
+            <p class="float-card-desc">My deployed digital space showcase.</p>
+          </div>
+          <div class="float-card-footer">
+            <span class="float-card-url">my-portfolio...vercel.app</span>
+            <svg class="float-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Card 02: LinkedIn -->
+        <a class="floating-link-card float-card-2" href="https://www.linkedin.com/in/anvitnaik" target="_blank"
+          rel="noreferrer">
+          <div class="float-card-glow"></div>
+          <div class="float-card-header">
+            <span class="float-card-num">02</span>
+            <span class="float-card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
             </span>
+          </div>
+          <div class="float-card-body">
+            <h3 class="float-card-title">LinkedIn</h3>
+            <p class="float-card-desc">Professional network & connections.</p>
+          </div>
+          <div class="float-card-footer">
+            <span class="float-card-url">/in/anvitnaik</span>
+            <svg class="float-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </div>
         </a>
 
-        <a
-          class="link-card"
-          href="https://www.linkedin.com/in/anvitnaik"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div>
-            <span class="link-label">LinkedIn</span>
-            <span class="link-sub">/in/anvitnaik</span>
+        <!-- Card 03: GitHub -->
+        <a class="floating-link-card float-card-3" href="https://github.com/Anvitnaik-cloud" target="_blank"
+          rel="noreferrer">
+          <div class="float-card-glow"></div>
+          <div class="float-card-header">
+            <span class="float-card-num">03</span>
+            <span class="float-card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+              </svg>
+            </span>
           </div>
-          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+          <div class="float-card-body">
+            <h3 class="float-card-title">GitHub</h3>
+            <p class="float-card-desc">Repositories, open-source work & code.</p>
+          </div>
+          <div class="float-card-footer">
+            <span class="float-card-url">Anvitnaik-cloud</span>
+            <svg class="float-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </div>
         </a>
 
-        <a
-          class="link-card"
-          href="https://github.com/Anvitnaik-cloud"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div>
-            <span class="link-label">GitHub</span>
-            <span class="link-sub">Anvitnaik-cloud</span>
+        <!-- Card 04: HackerRank -->
+        <a class="floating-link-card float-card-4" href="https://www.hackerrank.com/profile/anvitnaik470"
+          target="_blank" rel="noreferrer">
+          <div class="float-card-glow"></div>
+          <div class="float-card-header">
+            <span class="float-card-num">04</span>
+            <span class="float-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M7 3h10v2a5 5 0 01-5 5 5 5 0 01-5-5V3z" />
+                <path d="M5 8v2a5 5 0 01-4 4v1h22v-1a5 5 0 01-4-4V8" />
+                <path d="M9 21h6v-2H9z" />
+              </svg>
+            </span>
           </div>
-          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg></span>
+          <div class="float-card-body">
+            <h3 class="float-card-title">HackerRank</h3>
+            <p class="float-card-desc">Problem-solving and code challenges.</p>
+          </div>
+          <div class="float-card-footer">
+            <span class="float-card-url">/profile/anvitnaik470</span>
+            <svg class="float-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </div>
         </a>
 
-        <a
-          class="link-card"
-          href="https://www.hackerrank.com/profile/anvitnaik470"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div>
-            <span class="link-label">HackerRank</span>
-            <span class="link-sub">/profile/anvitnaik470</span>
+        <!-- Card 05: Email Me -->
+        <a class="floating-link-card float-card-5" href="mailto:anvitnaik470@gmail.com" target="_blank"
+          rel="noreferrer">
+          <div class="float-card-glow"></div>
+          <div class="float-card-header">
+            <span class="float-card-num">05</span>
+            <span class="float-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </span>
           </div>
-          <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h10v2a5 5 0 01-5 5 5 5 0 01-5-5V3z"/><path d="M5 8v2a5 5 0 01-4 4v1h22v-1a5 5 0 01-4-4V8"/><path d="M9 21h6v-2H9z"/></svg></span>
+          <div class="float-card-body">
+            <h3 class="float-card-title">Email Me</h3>
+            <p class="float-card-desc">Reach out directly for opportunities.</p>
+          </div>
+          <div class="float-card-footer">
+            <span class="float-card-url">anvitnaik470@gmail.com</span>
+            <svg class="float-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </div>
         </a>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" aria-labelledby="contact-heading">
+      <a href="#top" class="section-logo logo-contact">
+        <span class="nav-logo">AN<span class="nav-logo-dot">.</span></span>
+      </a>
       <div class="section-header fade-in-up">
         <h2 class="section-title">
           Contact
@@ -656,15 +955,19 @@
 
       <div class="contact-layout">
         <div class="card">
-          <h1 style="font-size: 0.98rem; margin-bottom: 0.8rem;">
-            Contact Info
-          </h1>
+          <br>
           <div class="contact-list">
             <div class="contact-item">
               <span>Email</span>
-              <strong><a href="mailto:anvitnaik470@gmail.com">anvitnaik470@gmail.com</a><a href="mailto:anvitnaik470@gmail.com" class="contact-verify" aria-label="Send email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></strong>
+              <strong><a href="mailto:anvitnaik470@gmail.com">anvitnaik470@gmail.com</a><a
+                  href="mailto:anvitnaik470@gmail.com" class="contact-verify" aria-label="Send email"><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg></a></strong>
             </div>
-            
+
             <div class="contact-item">
               <span>Location</span>
               <strong>Bengaluru, Karnataka, India</strong>
@@ -680,105 +983,93 @@
           </p>
         </div>
 
-        <div class="contact-card">
-          <h3>Let's build something together</h3>
-          <small>
-            Have a project in mind? I'd love to hear about it. Here's what I can help with:
-          </small>
-          <ul>
-            <li>
-              <strong>Web Development</strong> — responsive front-end interfaces and full-stack applications with Node.js &amp; databases.
-            </li>
-            <li>
-              <strong>Python &amp; Data</strong> — automation scripts, analytics dashboards, and event management tools.
-            </li>
-            <li>
-              <strong>AI &amp; GenAI</strong> — chatbots, multimodal assistants, and RAG-powered intelligent systems.
-            </li>
-          </ul>
-          <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted);">
-            Drop me an email or connect on LinkedIn.
-          </p>
+        <div class="contact-display-wrap">
+          <h2 class="contact-display-text">let's build something<br>together!</h2>
+          <h5 class="contact-sub-text">Have a project in mind ? I'd love to hear about it</h5>
         </div>
       </div>
+      <!-- Footer Inside Contact Section -->
+      <!-- Footer Inside Contact Section -->
+      <footer>
+        <div class="footer-glass-container">
+          <div class="footer-grid">
+            <!-- Column 1: Personal Brand -->
+            <div class="footer-brand">
+              <h3 class="footer-brand-name">Anvit Naik</h3>
+              <p class="footer-brand-title">Computer Science Student • Full Stack Developer • AI Enthusiast</p>
+              <p class="footer-brand-desc">Building scalable applications, AI-powered solutions, and intuitive digital
+                experiences.</p>
+              <div class="footer-socials">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/anvitnaik" target="_blank" rel="noopener noreferrer"
+                  aria-label="LinkedIn - Anvit Naik">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.1c.65-1.2 2.25-2.5 4.63-2.5C22.5 7.7 24 10.3 24 14.2V24h-5v-8.1c0-1.9-.04-4.3-2.63-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-5V8z" />
+                  </svg>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer"
+                  aria-label="GitHub - Anvitnaik-cloud">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z" />
+                  </svg>
+                </a>
+                <!-- Email -->
+                <a href="mailto:anvitnaik470@gmail.com" aria-label="Email Anvit">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M1.5 4.5h21v15h-21v-15zm2 2v11h17v-11l-8.5 5.5L3.5 6.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Column 2: Contact -->
+            <div class="footer-contact">
+              <h4 class="footer-heading">Let's Build Something Together</h4>
+              <div class="footer-actions">
+                <a href="mailto:anvitnaik470@gmail.com" class="btn footer-btn btn-primary">
+                  <span>Contact Me</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" width="16" height="16">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <hr class="footer-divider">
+
+          <div class="footer-bottom">
+            <p class="footer-copyright">© <span id="year">2026</span> Anvit Naik. All Rights Reserved. | Built with
+              Passion and Late-Night Coffee </p>
+          </div>
+        </div>
+      </footer>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-inner wrapper">
-      <div class="social-icons" role="navigation" aria-label="Social links">
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/anvitnaik" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Anvit Naik">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.2h.1c.65-1.2 2.25-2.5 4.63-2.5C22.5 7.7 24 10.3 24 14.2V24h-5v-8.1c0-1.9-.04-4.3-2.63-4.3-2.63 0-3.03 2.05-3.03 4.17V24h-5V8z"/></svg>
-        </a>
-
-        <!-- GitHub -->
-        <a href="https://github.com/Anvitnaik-cloud" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Anvitnaik-cloud">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.38s1.96.13 2.88.38c2.2-1.5 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.41-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
-        </a>
-
-        <!-- Email (simple mail glyph) -->
-        <a href="mailto:anvitnaik470@gmail.com" aria-label="Email Anvit">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M1.5 4.5h21v15h-21v-15zm2 2v11h17v-11l-8.5 5.5L3.5 6.5z"/></svg>
-        </a>
-      </div>
-
-      <p>
-        © <span id="year"></span> Anvit Naik. Built with Passion and late Night Coffee for learning and to Kill
-        Boredom.
-      </p>
-    </div>
-  </footer>
-
   <!-- Back to Top Button -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
   </button>
 
   <script>
     // Dynamic year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Intersection Observer for scroll-triggered animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    // Observe all animated elements
-    const animatedElements = document.querySelectorAll(
-      '.fade-in-up, .fade-in-down, .fade-in, .slide-in-left, .slide-in-right'
-    );
-    animatedElements.forEach((element) => {
-      observer.observe(element);
-    });
-
-    // Back to Top button
-    const backToTopBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        backToTopBtn.classList.add('visible');
-      } else {
-        backToTopBtn.classList.remove('visible');
-      }
-    });
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
   </script>
 
   <!-- GSAP Library for Willem Loading Animation -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Observer.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script>
+
   <script>
     // Willem Loading Animation
     function initWillemLoadingAnimation() {
@@ -803,8 +1094,10 @@
           // Show content after animation
           document.body.classList.remove('loading-mode');
           document.body.classList.add('loaded');
+          document.documentElement.classList.add('loaded');
           container.classList.add('is--hidden');
-          document.documentElement.style.overflow = 'auto';
+          document.documentElement.style.overflow = 'hidden';
+          window.dispatchEvent(new Event('loaderComplete'));
         }
       });
 
@@ -872,7 +1165,429 @@
       requestAnimationFrame(() => initWillemLoadingAnimation());
     }
   </script>
+
+  <!-- Scroll Snap Drag Animation Script -->
+  <script src="./js/scroll-snap.js"></script>
+
+  <!-- React and ScrollVelocity Component Integration -->
+  <script type="module">
+    import React, { useRef, useLayoutEffect, useState } from 'https://esm.sh/react@18';
+    import ReactDOM from 'https://esm.sh/react-dom@18/client';
+    import {
+      motion,
+      useScroll,
+      useSpring,
+      useTransform,
+      useMotionValue,
+      useVelocity,
+      useAnimationFrame
+    } from 'https://esm.sh/framer-motion@11.11.17';
+
+    function useElementWidth(ref) {
+      const [width, setWidth] = useState(0);
+
+      useLayoutEffect(() => {
+        if (!ref.current) return;
+
+        const updateWidth = () => {
+          if (ref.current) {
+            setWidth(ref.current.offsetWidth);
+          }
+        };
+
+        const observer = new ResizeObserver(() => {
+          updateWidth();
+        });
+
+        observer.observe(ref.current);
+        window.addEventListener('resize', updateWidth);
+
+        return () => {
+          observer.disconnect();
+          window.removeEventListener('resize', updateWidth);
+        };
+      }, [ref]);
+
+      return width;
+    }
+
+    const ScrollVelocity = ({
+      scrollContainerRef,
+      texts = [],
+      velocity = 100,
+      className = '',
+      damping = 50,
+      stiffness = 400,
+      numCopies = 6,
+      velocityMapping = { input: [0, 1000], output: [0, 5] },
+      parallaxClassName = 'parallax',
+      scrollerClassName = 'scroller',
+      parallaxStyle,
+      scrollerStyle
+    }) => {
+      function VelocityText({
+        children,
+        baseVelocity = velocity,
+        scrollContainerRef,
+        className = '',
+        damping,
+        stiffness,
+        numCopies,
+        velocityMapping,
+        parallaxClassName,
+        scrollerClassName,
+        parallaxStyle,
+        scrollerStyle
+      }) {
+        const baseX = useMotionValue(0);
+        const scrollOptions = scrollContainerRef ? { container: scrollContainerRef } : {};
+        const { scrollY } = useScroll(scrollOptions);
+        const scrollVelocity = useVelocity(scrollY);
+        const smoothVelocity = useSpring(scrollVelocity, {
+          damping: damping ?? 50,
+          stiffness: stiffness ?? 400
+        });
+        const velocityFactor = useTransform(
+          smoothVelocity,
+          velocityMapping?.input || [0, 1000],
+          velocityMapping?.output || [0, 5],
+          { clamp: false }
+        );
+
+        const copyRef = useRef(null);
+        const copyWidth = useElementWidth(copyRef);
+
+        function wrap(min, max, v) {
+          const range = max - min;
+          const mod = (((v - min) % range) + range) % range;
+          return mod + min;
+        }
+
+        const x = useTransform(baseX, v => {
+          if (copyWidth === 0) return '0px';
+          return `${wrap(-copyWidth, 0, v)}px`;
+        });
+
+        const directionFactor = useRef(1);
+        useAnimationFrame((t, delta) => {
+          let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+
+          if (velocityFactor.get() < 0) {
+            directionFactor.current = -1;
+          } else if (velocityFactor.get() > 0) {
+            directionFactor.current = 1;
+          }
+
+          moveBy += directionFactor.current * moveBy * velocityFactor.get();
+          baseX.set(baseX.get() + moveBy);
+        });
+
+        const spans = [];
+        for (let i = 0; i < numCopies; i++) {
+          spans.push(
+            React.createElement('span', {
+              className: className,
+              key: i,
+              ref: i === 0 ? copyRef : null
+            }, children, '\u00A0')
+          );
+        }
+
+        return (
+          React.createElement('div', {
+            className: parallaxClassName,
+            style: parallaxStyle
+          },
+            React.createElement(motion.div, {
+              className: scrollerClassName,
+              style: { x, ...scrollerStyle }
+            }, spans)
+          )
+        );
+      }
+
+      return (
+        React.createElement('div', null,
+          texts.map((text, index) => (
+            React.createElement(VelocityText, {
+              key: index,
+              className: className,
+              baseVelocity: index % 2 !== 0 ? -velocity : velocity,
+              scrollContainerRef: scrollContainerRef,
+              damping: damping,
+              stiffness: stiffness,
+              numCopies: numCopies,
+              velocityMapping: velocityMapping,
+              parallaxClassName: parallaxClassName,
+              scrollerClassName: scrollerClassName,
+              parallaxStyle: parallaxStyle,
+              scrollerStyle: scrollerStyle
+            }, text)
+          ))
+        )
+      );
+    };
+
+    const rootEl = document.getElementById('scroll-velocity-root');
+    if (rootEl) {
+      const root = ReactDOM.createRoot(rootEl);
+      root.render(
+        React.createElement(ScrollVelocity, {
+          texts: [
+            'Designer • Full Stack • GenAI • Python •',
+            'Creative Coder • Problem Solver • Leadership •'
+          ],
+          velocity: 60,
+          className: 'custom-scroll-text'
+        })
+      );
+    }
+  </script>
+
+  <!-- Certificates Carousel Infinite Loop Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.querySelector('.cert-grid');
+      if (!grid) return;
+
+      const originalCards = Array.from(grid.querySelectorAll('.cert-card'));
+      if (originalCards.length < 2) return;
+
+      const numOriginals = originalCards.length; // 6
+      const prependedCount = 2;
+
+      // Clone the last two cards and prepend them
+      const cloneLast1 = originalCards[numOriginals - 2].cloneNode(true);
+      const cloneLast2 = originalCards[numOriginals - 1].cloneNode(true);
+      cloneLast1.classList.add('clone');
+      cloneLast2.classList.add('clone');
+
+      // Clone the first two cards and append them
+      const cloneFirst1 = originalCards[0].cloneNode(true);
+      const cloneFirst2 = originalCards[1].cloneNode(true);
+      cloneFirst1.classList.add('clone');
+      cloneFirst2.classList.add('clone');
+
+      // Prepend before original[0]: results in [Card 4 clone, Card 5 clone] [original Cards 0-5]
+      grid.insertBefore(cloneLast2, originalCards[0]);
+      grid.insertBefore(cloneLast1, cloneLast2);
+
+      // Append clones at the end
+      grid.appendChild(cloneFirst1);
+      grid.appendChild(cloneFirst2);
+
+      let isMobile = window.innerWidth < 768;
+      let currentIndex = prependedCount; // Start at Card 0 original (index 2)
+      let autoplayTimer = null;
+      let autoplayResumeTimer = null;
+      let isTransitioning = false;
+
+      // Touch & Drag variables
+      let startX = 0;
+      let currentX = 0;
+      let isDragging = false;
+      let dragOffset = 0;
+
+      // Create dots dynamically
+      let dotsContainer = null;
+      let dots = [];
+
+      const createDots = () => {
+        if (dotsContainer) return;
+        dotsContainer = document.createElement('div');
+        dotsContainer.className = 'cert-carousel-dots';
+        
+        for (let i = 0; i < numOriginals; i++) {
+          const dot = document.createElement('span');
+          dot.className = 'dot';
+          if (i === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => {
+            if (isTransitioning) return;
+            stopAutoplay();
+            goToSlide(i + prependedCount);
+            resetAutoplayTimeout();
+          });
+          dotsContainer.appendChild(dot);
+          dots.push(dot);
+        }
+        
+        grid.parentNode.appendChild(dotsContainer);
+      };
+
+      const updateDots = () => {
+        if (dots.length === 0) return;
+        let activeIdx = (currentIndex - prependedCount) % numOriginals;
+        if (activeIdx < 0) activeIdx += numOriginals;
+        
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === activeIdx);
+        });
+      };
+
+      const getCardWidth = () => {
+        const card = grid.querySelector('.cert-card');
+        return card ? card.offsetWidth : 0;
+      };
+
+      const getSliderSettings = () => {
+        const viewportWidth = grid.parentElement.offsetWidth;
+        const cardWidth = getCardWidth();
+        const gap = 20; // 20px gap from CSS
+        const offsetPx = (viewportWidth - cardWidth) / 2;
+        const step = cardWidth + gap;
+        return { offsetPx, step };
+      };
+
+      const getSlidePositionPx = (index) => {
+        const { offsetPx, step } = getSliderSettings();
+        return offsetPx - index * step;
+      };
+
+      const setTrackPositionPx = (positionPx, animate = true) => {
+        if (animate) {
+          grid.style.transition = 'transform 0.8s ease-in-out';
+        } else {
+          grid.style.transition = 'none';
+        }
+        grid.style.transform = `translate3d(${positionPx}px, 0, 0)`;
+        if (!animate) {
+          // Force layout reflow to apply transition:none instantly
+          grid.offsetHeight;
+        }
+      };
+
+      const updateSlider = (animate = true) => {
+        const posPx = getSlidePositionPx(currentIndex);
+        setTrackPositionPx(posPx, animate);
+        updateDots();
+      };
+
+      const goToSlide = (index, animate = true) => {
+        if (isTransitioning && animate) return;
+        if (animate) isTransitioning = true;
+        currentIndex = index;
+        updateSlider(animate);
+      };
+
+      // Seamless boundary resetting on transitionend
+      grid.addEventListener('transitionend', () => {
+        isTransitioning = false;
+        if (currentIndex >= numOriginals + prependedCount) {
+          goToSlide(currentIndex - numOriginals, false);
+        } else if (currentIndex < prependedCount) {
+          goToSlide(currentIndex + numOriginals, false);
+        }
+      });
+
+      const nextSlide = () => {
+        if (isTransitioning) return;
+        goToSlide(currentIndex + 1);
+      };
+
+      const prevSlide = () => {
+        if (isTransitioning) return;
+        goToSlide(currentIndex - 1);
+      };
+
+      const startAutoplay = () => {
+        if (!isMobile) return;
+        stopAutoplay();
+        autoplayTimer = setInterval(nextSlide, 3500); // Autoplay interval 3.5s
+      };
+
+      const stopAutoplay = () => {
+        if (autoplayTimer) {
+          clearInterval(autoplayTimer);
+          autoplayTimer = null;
+        }
+      };
+
+      const resetAutoplayTimeout = () => {
+        clearTimeout(autoplayResumeTimer);
+        autoplayResumeTimer = setTimeout(() => {
+          startAutoplay();
+        }, 6000); // Resume autoplay after 6s of inactivity
+      };
+
+      // Touch events for drag gestures
+      const handleTouchStart = (e) => {
+        if (!isMobile || isTransitioning) return;
+        stopAutoplay();
+        clearTimeout(autoplayResumeTimer);
+        
+        isDragging = true;
+        startX = e.touches ? e.touches[0].clientX : e.clientX;
+        grid.style.transition = 'none';
+      };
+
+      const handleTouchMove = (e) => {
+        if (!isDragging) return;
+        currentX = e.touches ? e.touches[0].clientX : e.clientX;
+        dragOffset = currentX - startX;
+
+        // Apply dragOffset to current position
+        const currentBasePosPx = getSlidePositionPx(currentIndex);
+        grid.style.transform = `translate3d(${currentBasePosPx + dragOffset}px, 0, 0)`;
+      };
+
+      const handleTouchEnd = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        // Swipe threshold: 50px
+        if (dragOffset < -50) {
+          nextSlide();
+        } else if (dragOffset > 50) {
+          prevSlide();
+        } else {
+          // Snap back
+          goToSlide(currentIndex);
+        }
+        
+        dragOffset = 0;
+        resetAutoplayTimeout();
+      };
+
+      // Attach touch listeners to grid
+      grid.addEventListener('touchstart', handleTouchStart, { passive: true });
+      grid.addEventListener('touchmove', handleTouchMove, { passive: true });
+      grid.addEventListener('touchend', handleTouchEnd);
+
+      // Mouse drag support for testing/desktop simulators
+      grid.addEventListener('mousedown', handleTouchStart);
+      window.addEventListener('mousemove', handleTouchMove);
+      window.addEventListener('mouseup', handleTouchEnd);
+
+      const init = () => {
+        isMobile = window.innerWidth < 768;
+        if (isMobile) {
+          createDots();
+          goToSlide(prependedCount, false);
+          startAutoplay();
+        } else {
+          // Reset styles if resized back to desktop
+          grid.style.transform = 'none';
+          grid.style.transition = 'none';
+          stopAutoplay();
+          clearTimeout(autoplayResumeTimer);
+          if (dotsContainer) {
+            dotsContainer.remove();
+            dotsContainer = null;
+            dots = [];
+          }
+        }
+      };
+
+      // Run init on load
+      init();
+
+      // Run on resize
+      window.addEventListener('resize', init);
+    });
+  </script>
+
+  <!-- GSAP Hamburger Menu Animation -->
+  <script src="./js/hamburger-menu.js"></script>
 </body>
+
 </html>
-
-
