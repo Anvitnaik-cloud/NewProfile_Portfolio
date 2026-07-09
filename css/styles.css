@@ -2684,7 +2684,7 @@ footer {
 
 .back-to-top {
   position: fixed;
-  bottom: calc(2rem + 10px);
+  bottom: calc(2rem + 25px);
   right: 2rem;
   width: 48px;
   height: 48px;
@@ -3293,7 +3293,7 @@ body.menu-open main {
   .back-to-top {
     width: 44px;
     height: 44px;
-    bottom: calc(1.5rem + 10px);
+    bottom: calc(1.5rem + 25px);
     right: 1.5rem;
   }
 
@@ -3369,7 +3369,7 @@ body.menu-open main {
   .back-to-top {
     width: 40px;
     height: 40px;
-    bottom: calc(1rem + 10px);
+    bottom: calc(1rem + 25px);
     right: 1rem;
   }
 
@@ -3996,7 +3996,7 @@ body:not(.loaded) .section-logo {
 /* ===== MOBILE OVERRIDES FOR SKILLS SECTION (320px - 480px) ===== */
 @media (max-width: 768px) {
   section#skills {
-    padding: clamp(65px, 10vh, 85px) 4% clamp(15px, 3vh, 25px) !important;
+    padding: clamp(55px, 8vh, 70px) 4% clamp(15px, 3vh, 25px) !important;
     min-height: 100dvh !important;
     height: 100dvh !important;
     display: flex !important;
@@ -4006,7 +4006,7 @@ body:not(.loaded) .section-logo {
   }
   
   body.transitions-enabled section#skills .bg {
-    padding: clamp(65px, 10vh, 85px) 4% clamp(15px, 3vh, 25px) !important;
+    padding: clamp(55px, 8vh, 70px) 4% clamp(15px, 3vh, 25px) !important;
     height: 100dvh !important;
     min-height: 100dvh !important;
     display: flex !important;
@@ -4026,7 +4026,7 @@ body:not(.loaded) .section-logo {
   }
 
   #skills .section-header {
-    margin-bottom: clamp(12px, 2vh, 20px) !important;
+    margin-bottom: clamp(8px, 1.8vh, 15px) !important;
     text-align: center !important;
     align-items: center !important;
     width: 100% !important;
@@ -4057,7 +4057,7 @@ body:not(.loaded) .section-logo {
   #skills .skills-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.6rem !important;
+    gap: 0.45rem !important;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto !important;
@@ -4067,7 +4067,7 @@ body:not(.loaded) .section-logo {
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
-    padding: 0.65rem 0.75rem !important;
+    padding: 0.5rem 0.6rem !important;
     border-radius: var(--radius-lg) !important;
     height: 100% !important;
     min-height: unset !important;
@@ -4076,8 +4076,8 @@ body:not(.loaded) .section-logo {
   }
 
   #skills .card-title {
-    font-size: clamp(0.78rem, 2.2vw, 0.88rem) !important;
-    margin-bottom: 0.5rem !important;
+    font-size: clamp(0.72rem, 2vw, 0.82rem) !important;
+    margin-bottom: 0.35rem !important;
     text-align: left !important;
     font-weight: 700 !important;
   }
@@ -4087,16 +4087,16 @@ body:not(.loaded) .section-logo {
     flex-wrap: wrap !important;
     justify-content: flex-start !important;
     align-content: center !important;
-    gap: 4px !important;
-    row-gap: 4px !important;
+    gap: 3px !important;
+    row-gap: 3px !important;
     margin-top: 0 !important;
     width: 100% !important;
   }
 
   #skills .skill-chip {
-    font-size: clamp(0.62rem, 1.8vw, 0.72rem) !important;
-    padding: 0 clamp(6px, 1.5vw, 10px) !important;
-    height: clamp(18px, 5vw, 22px) !important;
+    font-size: clamp(0.58rem, 1.7vw, 0.65rem) !important;
+    padding: 0 clamp(5px, 1.2vw, 8px) !important;
+    height: clamp(16px, 4.5vw, 20px) !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -4110,36 +4110,36 @@ body:not(.loaded) .section-logo {
 /* ===== MOBILE OVERRIDES FOR ABOUT SECTION (320px - 480px) ===== */
 @media (max-width: 768px) {
   section#about {
-    padding: clamp(30px, 5vh, 45px) 5% clamp(20px, 4vh, 35px) !important;
+    padding: clamp(65px, 10vh, 85px) 5% clamp(20px, 4vh, 35px) !important;
     min-height: 100dvh !important;
     height: 100dvh !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     box-sizing: border-box !important;
   }
   
   body.transitions-enabled section#about .bg {
-    padding: clamp(30px, 5vh, 45px) 5% clamp(20px, 4vh, 35px) !important;
+    padding: clamp(65px, 10vh, 85px) 5% clamp(20px, 4vh, 35px) !important;
     height: 100dvh !important;
     min-height: 100dvh !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     box-sizing: border-box !important;
   }
 
   #about .section-header {
-    margin-bottom: clamp(1.2rem, 3.5vh, 2rem) !important;
+    margin-bottom: clamp(1rem, 2.5vh, 1.5rem) !important;
     width: 100% !important;
     text-align: center !important;
     align-items: center !important;
   }
 
   #about .about {
-    padding: clamp(1.1rem, 4vw, 1.4rem) clamp(1.2rem, 5vw, 1.6rem) !important;
-    font-size: clamp(0.85rem, 2.5vw, 0.95rem) !important;
-    line-height: 1.55 !important;
+    padding: clamp(0.85rem, 3vw, 1.1rem) clamp(1rem, 4vw, 1.25rem) !important;
+    font-size: clamp(0.78rem, 2.2vw, 0.88rem) !important;
+    line-height: 1.45 !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
@@ -4147,11 +4147,11 @@ body:not(.loaded) .section-logo {
   }
 
   #about .about p+p {
-    margin-top: 0.8rem !important;
+    margin-top: 0.6rem !important;
   }
 
   #scroll-velocity-root {
-    margin-top: clamp(1.5rem, 4vh, 2rem) !important;
+    margin-top: clamp(1.2rem, 3vh, 1.6rem) !important;
     margin-bottom: 0.5rem !important;
   }
 
@@ -4349,14 +4349,14 @@ body:not(.loaded) .section-logo {
 /* ===== HERO SECTION — MOBILE ===== */
 @media (max-width: 768px) {
   .hero {
-    padding: clamp(50px, 8vh, 70px) 5% clamp(30px, 5vh, 50px) !important;
+    padding: clamp(45px, 6vh, 55px) 5% clamp(15px, 3vh, 25px) !important;
     min-height: 100dvh !important;
     height: 100dvh !important;
     box-sizing: border-box !important;
   }
 
   body.transitions-enabled .hero .bg {
-    padding: clamp(50px, 8vh, 70px) 5% clamp(30px, 5vh, 50px) !important;
+    padding: clamp(45px, 6vh, 55px) 5% clamp(15px, 3vh, 25px) !important;
     height: 100dvh !important;
     min-height: 100dvh !important;
     display: flex !important;
@@ -4385,7 +4385,7 @@ body:not(.loaded) .section-logo {
     white-space: normal !important;
     word-break: break-word !important;
     text-align: left !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 0.5rem !important;
     line-height: 1.15 !important;
   }
 
@@ -4393,20 +4393,20 @@ body:not(.loaded) .section-logo {
     font-size: clamp(0.85rem, 2.5vw, 1rem) !important;
     text-align: left !important;
     max-width: 100% !important;
-    margin-bottom: 1.2rem !important;
+    margin-bottom: 0.6rem !important;
     line-height: 1.55 !important;
   }
 
   .hero-pill {
     font-size: clamp(0.6rem, 1.8vw, 0.72rem) !important;
     padding: 0.3rem 0.8rem !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 0.4rem !important;
   }
 
   .hero-tags {
     justify-content: flex-start !important;
     gap: 0.5rem !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 0.8rem !important;
   }
 
   .tag {
@@ -4429,23 +4429,23 @@ body:not(.loaded) .section-logo {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    margin-top: clamp(45px, 8vh, 70px) !important;
+    margin-top: clamp(20px, 4vh, 30px) !important;
   }
 
   .hero-profile-ring {
-    width: clamp(230px, 60vw, 310px) !important;
-    height: clamp(230px, 60vw, 310px) !important;
+    width: clamp(200px, 50vw, 250px) !important;
+    height: clamp(200px, 50vw, 250px) !important;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: clamp(40px, 7vh, 55px) 5% clamp(20px, 4vh, 35px) !important;
+    padding: clamp(35px, 5vh, 45px) 5% clamp(10px, 2vh, 15px) !important;
   }
 
   body.transitions-enabled .hero .bg {
-    padding: clamp(40px, 7vh, 55px) 5% clamp(20px, 4vh, 35px) !important;
+    padding: clamp(35px, 5vh, 45px) 5% clamp(10px, 2vh, 15px) !important;
   }
 
   .hero-title {
@@ -4457,17 +4457,22 @@ body:not(.loaded) .section-logo {
   }
 
   .hero-profile-ring {
-    width: clamp(200px, 55vw, 260px) !important;
-    height: clamp(200px, 55vw, 260px) !important;
+    width: clamp(165px, 46vw, 200px) !important;
+    height: clamp(165px, 46vw, 200px) !important;
   }
 
   .hero-actions {
-    flex-direction: column !important;
+    flex-direction: row !important;
+    gap: 0.5rem !important;
   }
 
   .hero-actions .btn {
-    width: 100% !important;
+    width: auto !important;
+    flex: 1 1 auto !important;
+    padding: 0.7rem 1.1rem !important;
+    font-size: 0.82rem !important;
     justify-content: center !important;
+    white-space: nowrap !important;
   }
 }
 
@@ -4777,7 +4782,7 @@ body:not(.loaded) .section-logo {
 /* ===== CONTACT SECTION — MOBILE ===== */
 @media (max-width: 768px) {
   section#contact {
-    padding: clamp(30px, 5vh, 45px) 5% 0 !important;
+    padding: clamp(120px, 18vh, 155px) 5% 0 !important;
     min-height: 100dvh !important;
     height: 100dvh !important;
     display: flex !important;
@@ -4787,7 +4792,7 @@ body:not(.loaded) .section-logo {
   }
 
   body.transitions-enabled section#contact .bg {
-    padding: clamp(30px, 5vh, 45px) 5% 0 !important;
+    padding: clamp(120px, 18vh, 155px) 5% 0 !important;
     height: 100dvh !important;
     min-height: 100dvh !important;
     display: flex !important;
@@ -4923,8 +4928,8 @@ body:not(.loaded) .section-logo {
   }
 
   .hero-profile-ring {
-    width: clamp(180px, 50vw, 220px) !important;
-    height: clamp(180px, 50vw, 220px) !important;
+    width: clamp(140px, 40vw, 170px) !important;
+    height: clamp(140px, 40vw, 170px) !important;
   }
 
   #skills .section-title,
