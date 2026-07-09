@@ -3996,7 +3996,7 @@ body:not(.loaded) .section-logo {
 /* ===== MOBILE OVERRIDES FOR SKILLS SECTION (320px - 480px) ===== */
 @media (max-width: 768px) {
   section#skills {
-    padding: clamp(55px, 8vh, 70px) 4% clamp(15px, 3vh, 25px) !important;
+    padding: clamp(70px, 10vh, 85px) 4% clamp(15px, 3vh, 25px) !important;
     min-height: 100dvh !important;
     height: 100dvh !important;
     display: flex !important;
@@ -4006,7 +4006,7 @@ body:not(.loaded) .section-logo {
   }
   
   body.transitions-enabled section#skills .bg {
-    padding: clamp(55px, 8vh, 70px) 4% clamp(15px, 3vh, 25px) !important;
+    padding: clamp(70px, 10vh, 85px) 4% clamp(15px, 3vh, 25px) !important;
     height: 100dvh !important;
     min-height: 100dvh !important;
     display: flex !important;
