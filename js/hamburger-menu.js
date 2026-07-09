@@ -14,13 +14,17 @@
 
   let isOpen = false;
 
+  // Read the translation amount dynamically from CSS variables (e.g., 4.3px on mobile, 5.5px on desktop)
+  const style = window.getComputedStyle(hamburgerMenu);
+  const translateY = parseFloat(style.getPropertyValue('--hamburger-y')) || 5.5;
+
   // Build the GSAP timeline (paused) — matches reference exactly
   const tl = gsap.timeline({ paused: true });
 
   // Top line: rotate 45° and move down
   tl.to('#top-line', {
     rotate: 45,
-    y: 5.5,
+    y: translateY,
     duration: 1,
     ease: 'expo.out'
   }, 0); // Starts immediately on click
@@ -28,7 +32,7 @@
   // Bottom line: rotate -45° and move up
   tl.to('#bottom-line', {
     rotate: -45,
-    y: -5.5,
+    y: -translateY,
     duration: 1,
     ease: 'expo.out'
   }, '<'); // Starts with previous animation
